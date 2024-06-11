@@ -40,6 +40,8 @@ const birthYear = 1997;
 // const job; (requires a value)
 */
 
+/*
+const now = 2024
 const ageSam = 2024 - 1997;
 const agePaul = 2024 - 1967;
 console.log(agePaul, ageSam);
@@ -65,4 +67,29 @@ console.log(x)
 // Comparison Operators
 console.log(agePaul > ageSam); // return an answer as a boolean (asking a question)
 console.log(ageSam >= 18); // >= Greater or equal too
+
+const isFullAge = ageSam >= 18;
+
+console.log(now - 1967 > now - 1997);
+*/
+
+/*
+const now = 2024
+const ageSam = 2024 - 1997;
+const agePaul = 2024 - 1967;
+console.log(agePaul, ageSam);
+
+console.log(now - 1967 > now - 1997);
+
+console.log(25 - 10 - 5);
+
+let x, y;
+x = y = 25 - 10 - 5; // x = y = 10 (minus done first and then right to left to give x and y the value each as 10)
+console.log(x, y);
+
+const averageAge = (agePaul + ageSam) / 2
+console.log(agePaul, ageSam, averageAge); // like maths () are always first
+*/
+
+// FIRST TEST
 
