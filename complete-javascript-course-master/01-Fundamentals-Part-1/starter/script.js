@@ -245,6 +245,14 @@ console.log(String(23)); // 'String' converts number to string (start with capit
 */
 
 // TYPE COERCION (JS converting for me)
-
+/*
 console.log('I am' + 27 + ' years old') // the + does the coercion for me (+ is always number to string)
 console.log('23' - '12') // the - does the coercion for me (- is always string to number)
+*/
+
+// 5 FALSY VALUES = 0, '', UNNDEFINED, NULL, NAN
+
+// === = equal / = = assigned too
+
+// == = type coersion 
+
