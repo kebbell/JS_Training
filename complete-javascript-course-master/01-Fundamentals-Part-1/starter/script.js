@@ -386,3 +386,5 @@ if (day === 'Monday') {
 }
 */
 
+// STATEMENTTS AND EXPRESSIONS
+
