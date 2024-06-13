@@ -296,6 +296,7 @@ if (hasDriversLicense && hasGoodVision && !isTired) {
 
 // TEST 3
 
+/*
 let dolphins1 = 96;
 let dolphins2 = 108;
 let dolphins3 = 89;
@@ -310,8 +311,37 @@ let koalasAverage = (koala1 + koala2 + koala3) / 3;
 if (dolphinsAverage > koalasAverage) {
   console.log('Dolphins average is higher');
 } else if (dolphinsAverage === koalasAverage) {
-  console.log('Averages are the same')
+  console.log('Averages are the same');
+} else if {
+  console.log('Koalas average is higher');
+} 
+*/
+
+/*
+let dolphins1 = 97;
+let dolphins2 = 112;
+let dolphins3 = 101;
+
+let koala1 = 100;
+let koala2 = 95;
+let koala3 = 123;
+
+let dolphinsAverage = (dolphins1 + dolphins2 + dolphins3) / 3;
+let koalasAverage = (koala1 + koala2 + koala3) / 3;
+console.log(koalasAverage, dolphinsAverage)
+
+if (dolphinsAverage > koalasAverage && dolphinsAverage >= 100) {
+  console.log('Dolphins average is higher');
+} else if (dolphinsAverage === koalasAverage && dolphinsAverage >= 100 && koalasAverage >= 100) {
+  console.log('Averages are the same so they both win (or lose)');
+} else if (dolphinsAverage < koalasAverage && koalasAverage >= 100) {
+  console.log('Koalas average is higher');
 } else {
-  console.log('Koalas average is higher')
+  console.log('NO ONE WINS');
 }
+*/
+
+// SWITCH STATEMENT L23
+
+
 
