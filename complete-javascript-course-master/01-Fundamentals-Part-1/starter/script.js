@@ -254,5 +254,19 @@ console.log('23' - '12') // the - does the coercion for me (- is always string t
 
 // === = equal / = = assigned too
 
-// == = type coersion 
+// == = type coersion (AVOID USING AS IT CAN CAUSE BUGS)
+
+/*
+const favourite = prompt('Whats your favourite number?');
+console.log(favourite); // STRING
+if(favourite == 23) {
+  console.log('My fave number is 23') // COERSION SO CONVERTER TO NUMBER
+} else if (favourite === 7) {
+  console.log('7 i like the no.7 too')
+} else {
+  console.log('That is not my fave number')
+}
+
+if(favourite !== 23) console.log('why not 23?') // NOT EQUAL TOO
+*/
 
