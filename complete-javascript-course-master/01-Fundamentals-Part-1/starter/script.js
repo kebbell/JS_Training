@@ -270,3 +270,48 @@ if(favourite == 23) {
 if(favourite !== 23) console.log('why not 23?') // NOT EQUAL TOO
 */
 
+// LOGICAL OPERATORS L21
+
+/*
+const hasDriversLicense = true; // A
+const hasGoodVision = true; // B
+
+console.log(hasDriversLicense && hasGoodVision); // && = AND
+console.log(hasDriversLicense || hasGoodVision); // || = OR
+
+const isTired = false; // C
+
+console.log(hasDriversLicense && hasGoodVision && isTired)
+
+if (hasDriversLicense && hasGoodVision && !isTired) {
+  console.log('Sam is good to drive'); 
+} else {
+  console.log("Sam shouldn't drive");
+}
+*/
+
+////////////////////////////////////////////////////////
+
+// CODING CHALLENGE 
+
+// TEST 3
+
+let dolphins1 = 96;
+let dolphins2 = 108;
+let dolphins3 = 89;
+
+let koala1 = 88;
+let koala2 = 91;
+let koala3 = 110;
+
+let dolphinsAverage = (dolphins1 + dolphins2 + dolphins3) / 3;
+let koalasAverage = (koala1 + koala2 + koala3) / 3;
+
+if (dolphinsAverage > koalasAverage) {
+  console.log('Dolphins average is higher');
+} else if (dolphinsAverage === koalasAverage) {
+  console.log('Averages are the same')
+} else {
+  console.log('Koalas average is higher')
+}
+
