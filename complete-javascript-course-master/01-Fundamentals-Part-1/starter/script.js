@@ -343,5 +343,3 @@ if (dolphinsAverage > koalasAverage && dolphinsAverage >= 100) {
 
 // SWITCH STATEMENT L23
 
-
-
