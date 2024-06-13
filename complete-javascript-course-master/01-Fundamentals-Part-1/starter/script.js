@@ -392,3 +392,37 @@ if (day === 'Monday') {
 
 // STATEMENT DOES NOT PRODUCE A VALUE BY ITSELF
 
+// THE CONDITIONAL (TERNARY) OPERATOR L25
+
+const age = 23;
+// age >= 18 ? console.log('I like to drink wine 🍷') : // ? is if
+// console.log('I like to drink water 💦') // : is else
+
+const drink = age >= 18 ? 'wine 🍷' : 'water 💦';
+console.log(drink) // MUCH SHORTER IF ELSE STATEMENT (BELOW IS THE SAME STATEMENT)
+
+let drink2;
+if (age >= 18) {
+  drink2 = 'wine 🍷';
+} else {
+  drink2 = 'water 💦';
+}
+console.log(drink2)
+
+console.log(`i like to drink ${age >= 18 ? 'wine 🍷' : 'water 💦'}`); // STATEMENT CAN BE INPUT INTO A STRING TEMPLATE `` WITH TERNARY OPERATORS
+
+// TERNARY IS NOT A REPLACEMENT OF IF ELSE STATEMENTS, JUST QUICKER AND EASIER FOR SIMPLE LINES OF CODE
+
+///////////////////////////////////////////////////////////////////
+
+// CODING CHALLENGE
+
+// TEST 4
+
+let bill1 = 275
+let bill2 = 40
+let bill3 = 430
+
+const tip = bill1 >= 50 && bill1 <= 300 ? bill1 * .20 : bill1 * .15;
+const tipMessage = `The tip is $${tip}`;
+console.log(tipMessage);
