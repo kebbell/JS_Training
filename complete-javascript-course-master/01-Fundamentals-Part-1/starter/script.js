@@ -427,3 +427,6 @@ const tip = bill1 >= 50 && bill1 <= 300 ? bill1 * .20 : bill1 * .15;
 const tipMessage = `The tip is $${tip}`;
 console.log(tipMessage);
 */
+
+
+//////////// TO CONTINUE TOMORROW 
