@@ -418,7 +418,7 @@ console.log(`i like to drink ${age >= 18 ? 'wine 🍷' : 'water 💦'}`); // STA
 // CODING CHALLENGE
 
 // TEST 4
-
+/*
 let bill1 = 275
 let bill2 = 40
 let bill3 = 430
@@ -426,3 +426,5 @@ let bill3 = 430
 const tip = bill1 >= 50 && bill1 <= 300 ? bill1 * .20 : bill1 * .15;
 const tipMessage = `The tip is $${tip}`;
 console.log(tipMessage);
+*/
+
