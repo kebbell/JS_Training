@@ -429,6 +429,7 @@ const tipMessage = `The tip is $${tip}`;
 console.log(tipMessage);
 */
 
+/*
 let bill = 275
 let bill2 = 40
 let bill3 = 430
@@ -436,3 +437,5 @@ let bill3 = 430
 const tip = bill >= 50 && bill <= 300 ? bill * .15 : bill * .2;
 
 console.log(`The bill was ${bill}, the tip was ${tip}, the total is now ${bill + tip}.`)
+*/
+
