@@ -429,5 +429,3 @@ console.log(tipMessage);
 */
 
 
-//////////// TO CONTINUE TOMORROW ////////////////
-
