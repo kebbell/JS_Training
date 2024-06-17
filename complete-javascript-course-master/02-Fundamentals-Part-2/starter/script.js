@@ -36,7 +36,7 @@ const appleOrangeJuice = fruitProcessor(2, 4);
 console.log(appleOrangeJuice)
 */
 
-// FUNCTIONS - DECLARATION & EXPRESSIONS
+// FUNCTIONS - DECLARATION & EXPRESSIONS L31
 
 // DECLARATION FUNCTION //
 function calcAge1(birthYear) {
@@ -57,7 +57,7 @@ const age2 = calcAge2(1997);
 console.log(age1, age2)
 // ^^ EXPRESSION FUNCTION ^^ //
 
-// ARROW FUNCTION // 
+// ARROW FUNCTION // L32
 const calcAge3 = birthYear => 2037 - birthYear // GOOD FOR ONE LINE FUNCTIONS
 const age3 = calcAge3(1997);
 console.log(age3);
@@ -70,4 +70,11 @@ const yearsUntilRetirement = (birthYear, firstName) => {
 }
 
 console.log(yearsUntilRetirement(1997, 'Sam'));
-console.log(yearsUntilRetirement(1997, 'Sam'));
+console.log(yearsUntilRetirement(1980, 'Jack'));
+
+// FUNCTIONS CALLING OTHER FUNCTTIONS L33
+
+function fruitProcessor(apples, oranges) {
+  const juice = `Juice with ${apples} apples and ${oranges} oranges.`;
+  return juice; 
+}
