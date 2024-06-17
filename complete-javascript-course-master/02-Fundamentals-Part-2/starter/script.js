@@ -117,3 +117,9 @@ console.log(yearsUntilRetirement(1991, 'Sam'));
 console.log(yearsUntilRetirement(1970, 'John'));
 */
 
+////////////////////////////////////////////////////////////////////////
+
+// CODING CHALLENGE
+
+// TEST 4
+
