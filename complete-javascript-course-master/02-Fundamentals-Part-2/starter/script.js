@@ -1,4 +1,5 @@
-'use strict'; // SHOULD ALWAYS USE!! - FORBIDS YOU DOING CERTAIN THINGS & GIVES VISUAL ERRORS THAT NORMAL JS WOULDNT
+'use strict';
+// SHOULD ALWAYS USE!! - FORBIDS YOU DOING CERTAIN THINGS & GIVES VISUAL ERRORS THAT NORMAL JS WOULDNT
 
 /*
 let hasDriversLicense = false;
@@ -39,6 +40,7 @@ console.log(appleOrangeJuice)
 // FUNCTIONS - DECLARATION & EXPRESSIONS L31
 
 // DECLARATION FUNCTION //
+/*
 function calcAge1(birthYear) {
   return 2037 - birthYear;
 }
@@ -87,3 +89,31 @@ function fruitProcessor(apples, oranges) {
 }
 
 console.log(fruitProcessor (4, 2))
+*/
+
+// REVIEW FUNCTIONS L34
+/*
+const calcAge = function (birthYear) {
+  return 2037 -  birthYear;
+}
+
+const yearsUntilRetirement = function (birthYear, firstName) {
+  const age = 2037 - birthYear;
+  const retirement = 65 - age;
+  
+  if (retirement > 0) {
+    console.log(`${firstName} retires in ${retirement} years`);
+    return retirement;
+  } else {
+    console.log(`${firstName} has already retired`)
+    return -1;
+  }
+
+  return retirement;
+  // return `${firstName} retires in ${retirement} years`
+}
+
+console.log(yearsUntilRetirement(1991, 'Sam'));
+console.log(yearsUntilRetirement(1970, 'John'));
+*/
+
