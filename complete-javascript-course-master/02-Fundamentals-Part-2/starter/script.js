@@ -74,7 +74,16 @@ console.log(yearsUntilRetirement(1980, 'Jack'));
 
 // FUNCTIONS CALLING OTHER FUNCTTIONS L33
 
+  function cutFruitPieces(fruit) {
+    return fruit * 4
+  }
+
 function fruitProcessor(apples, oranges) {
-  const juice = `Juice with ${apples} apples and ${oranges} oranges.`;
+  const applePieces = cutFruitPieces(apples);
+  const orangePieces = cutFruitPieces(oranges);
+
+  const juice = `Juice with ${applePieces} pieces of apple and ${orangePieces} segments of orange.`;
   return juice; 
 }
+
+console.log(fruitProcessor (4, 2))
