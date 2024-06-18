@@ -123,6 +123,7 @@ console.log(yearsUntilRetirement(1970, 'John'));
 
 // TEST 4
 
+// TEST 1 IN TEST 4
 const calcAverage = (a, b, c) => (a + b + c) / 3;
 
 const scoreDolphins = calcAverage(44, 23, 71);
@@ -138,3 +139,6 @@ const checkWinner = (avgDolphins, avgKoalas) => {
   }
 }
 checkWinner(scoreDolphins, scoreKoalas);
+
+// TEST 2 IN TEST 4
+
