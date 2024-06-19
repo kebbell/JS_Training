@@ -124,6 +124,7 @@ console.log(yearsUntilRetirement(1970, 'John'));
 // TEST 4
 
 // TEST 1 IN TEST 4
+/*
 const calcAverage = (a, b, c) => (a + b + c) / 3;
 
 const scoreDolphins = calcAverage(44, 23, 71);
@@ -139,6 +140,25 @@ const checkWinner = (avgDolphins, avgKoalas) => {
   }
 }
 checkWinner(scoreDolphins, scoreKoalas);
+*/
 
 // TEST 2 IN TEST 4
 
+const calcAverage = (a, b, c) => (a + b + c) / 3;
+
+let scoreDolphins = calcAverage (85, 54, 41);
+let scoreKoalas = calcAverage (23, 34, 27);
+
+console.log(scoreDolphins, scoreKoalas);
+
+const checkWinner = (averageDolphins, averageKoalas) => {
+  if (averageDolphins >= 2 * averageKoalas){
+    console.log(`The winner is Dolphins, ${averageDolphins} vs. ${averageKoalas}.`);
+  } else if (averageKoalas >= 2 * averageDolphins) {
+    console.log(`The winner is Koalas, ${averageKoalas} vs. ${averageDolphins}.`);
+  } else {
+    console.log('No one wins');
+  }
+}
+
+checkWinner (scoreDolphins, scoreKoalas)
