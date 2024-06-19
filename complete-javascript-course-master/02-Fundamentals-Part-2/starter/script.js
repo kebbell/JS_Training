@@ -236,3 +236,4 @@ if (friends.includes('Steven')) {
 } else {
   console.log('No friends');
 }
+
