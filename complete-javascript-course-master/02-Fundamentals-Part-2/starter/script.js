@@ -124,11 +124,10 @@ console.log(yearsUntilRetirement(1970, 'John'));
 // TEST 4
 
 // TEST 1 IN TEST 4
-/*
 const calcAverage = (a, b, c) => (a + b + c) / 3;
 
-const scoreDolphins = calcAverage(44, 23, 71);
-const scoreKoalas = calcAverage(65, 54, 49);
+let scoreDolphins = calcAverage(44, 23, 71);
+let scoreKoalas = calcAverage(65, 54, 49);
 
 const checkWinner = (avgDolphins, avgKoalas) => {
   if (avgDolphins >= 2 * avgKoalas) {
@@ -140,25 +139,22 @@ const checkWinner = (avgDolphins, avgKoalas) => {
   }
 }
 checkWinner(scoreDolphins, scoreKoalas);
-*/
 
 // TEST 2 IN TEST 4
 
-const calcAverage = (a, b, c) => (a + b + c) / 3;
+scoreDolphins = calcAverage (85, 54, 41);
+scoreKoalas = calcAverage (23, 34, 27);
 
-let scoreDolphins = calcAverage (85, 54, 41);
-let scoreKoalas = calcAverage (23, 34, 27);
+console.log(scoreDolphins, scoreKoalas); // just reference to help as we go along
 
-console.log(scoreDolphins, scoreKoalas);
-
-const checkWinner = (averageDolphins, averageKoalas) => {
-  if (averageDolphins >= 2 * averageKoalas){
-    console.log(`The winner is Dolphins, ${averageDolphins} vs. ${averageKoalas}.`);
-  } else if (averageKoalas >= 2 * averageDolphins) {
-    console.log(`The winner is Koalas, ${averageKoalas} vs. ${averageDolphins}.`);
-  } else {
-    console.log('No one wins');
-  }
-}
+// const checkWinner = (averageDolphins, averageKoalas) => {
+//   if (averageDolphins >= 2 * averageKoalas){
+//     console.log(`The winner is Dolphins, ${averageDolphins} vs. ${averageKoalas}.`);
+//   } else if (averageKoalas >= 2 * averageDolphins) {
+//     console.log(`The winner is Koalas, ${averageKoalas} vs. ${averageDolphins}.`);
+//   } else {
+//     console.log('No one wins');
+//   }
+// }
 
 checkWinner (scoreDolphins, scoreKoalas)
