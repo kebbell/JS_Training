@@ -124,6 +124,7 @@ console.log(yearsUntilRetirement(1970, 'John'));
 // TEST 4
 
 // TEST 1 IN TEST 4
+/*
 const calcAverage = (a, b, c) => (a + b + c) / 3;
 
 let scoreDolphins = calcAverage(44, 23, 71);
@@ -158,3 +159,23 @@ console.log(scoreDolphins, scoreKoalas); // just reference to help as we go alon
 // }
 
 checkWinner (scoreDolphins, scoreKoalas)
+*/
+
+
+// ARRAYS L36
+
+const friends = ['Michael', 'Steven', 'John'];
+const years = new Array(1991, 2001, 2011, 2021);
+
+console.log(friends, years);
+
+console.log(friends[0]); // ARRAYS ARE 0 BASED SO 0 IS FIRST, 1 IS SECOND ETC
+
+console.log(friends.length); // EXACT AMOUNT OF ELEMENTS IN THE ARRAY
+
+ console.log(friends[friends.length-2]); // INSIDE THE BRACKETS IS DEFINED FIRST SO THE ELEMENTS (WHICH IS 0 BASED) MINUS 2 SO STEVEN IS OUTPUT
+
+ friends[2] = 'Sam'; // CONST CAN BE CHANGED AS ARRAYS ARE NOT PRIMITIVE
+ console.log(friends);
+
+ const sam = ['Sam', 'Kebbell', ]
