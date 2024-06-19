@@ -165,9 +165,9 @@ checkWinner (scoreDolphins, scoreKoalas)
 // ARRAYS L36
 
 const friends = ['Michael', 'Steven', 'John'];
-const years = new Array(1991, 2001, 2011, 2021);
+const y = new Array(1991, 2001, 2011, 2021);
 
-console.log(friends, years);
+console.log(friends, y);
 
 console.log(friends[0]); // ARRAYS ARE 0 BASED SO 0 IS FIRST, 1 IS SECOND ETC
 
@@ -178,4 +178,25 @@ console.log(friends.length); // EXACT AMOUNT OF ELEMENTS IN THE ARRAY
  friends[2] = 'Sam'; // CONST CAN BE CHANGED AS ARRAYS ARE NOT PRIMITIVE
  console.log(friends);
 
- const sam = ['Sam', 'Kebbell', ]
+ const firstName = 'Sam'
+ const sam = [firstName, 'Kebbell', 2024 - 1997, 'Legend', friends];
+
+ console.log(sam);
+
+ // EXERCISE
+
+ const calcAge = function (birthYear) {
+  return 2024 -  birthYear;
+}
+
+const years = [1985, 1987, 1989, 1993, 1995, 1996, 1997, 2001, 2009, 2015, 2020];
+
+const age1 = calcAge(years[0]);
+const age2 = calcAge(years[2]);
+const age3 = calcAge(years[4]);
+const age4 = calcAge(years[years.length -1]);
+
+console.log(age1, age2, age3, age4);
+
+const age = [calcAge(years[0]), calcAge(years[2]), calcAge(years[4]), calcAge(years[years.length -1])];
+console.log(age);
