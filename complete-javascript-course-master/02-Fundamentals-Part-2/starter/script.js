@@ -163,7 +163,7 @@ checkWinner (scoreDolphins, scoreKoalas)
 
 
 // ARRAYS L36
-
+/*
 const friends = ['Michael', 'Steven', 'John'];
 const y = new Array(1991, 2001, 2011, 2021);
 
@@ -200,3 +200,39 @@ console.log(age1, age2, age3, age4);
 
 const age = [calcAge(years[0]), calcAge(years[2]), calcAge(years[4]), calcAge(years[years.length -1])];
 console.log(age);
+*/
+
+// ADD ELEMENTS
+const friends = ['Michael', 'Steven', 'John'];
+const newFriend = friends.push('Sam'); // push adds to the end annd putting it in a variable (newFriends) this can help to find the length
+// .PUSH RETURNS A VALUE SO ADDING THE VARIABLE INFRONT MAKES IT ABLE TO SHOW IT. .PUSH RETURNS THE LENGTH
+console.log(friends);
+console.log(newFriend);
+
+friends.unshift('John');
+console.log(friends);
+
+// REMOVE ELEMENTS
+
+const removedFriend = friends.pop(); // REMOVES THE LAST ELEMENT
+// .POP RETURNS THE VALUE OF THE LAST ELEMENT THAT WAS REMOVED
+friends.pop()
+console.log(removedFriend);
+console.log(friends);
+
+friends.shift(); // REMOVES TTHE FIRST ELEMENT
+console.log(friends);
+
+console.log(friends.indexOf('Steven')); // 0 BASED
+
+console.log(friends.indexOf('Bob'));
+
+console.log(friends.includes('Sam'));
+console.log(friends.includes('Michael'));
+
+// USING AN ARRAY IN AN IF ELSE SITUATION
+if (friends.includes('Steven')) {
+  console.log('YAY');
+} else {
+  console.log('No friends');
+}
