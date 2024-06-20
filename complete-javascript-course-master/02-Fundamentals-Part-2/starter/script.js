@@ -264,6 +264,7 @@ console.log(total);
 
 // OJECTS L39
 
+/*
 const sam = {
   firstName: 'Sam',
   lastName: 'Kebbell',
@@ -281,3 +282,34 @@ const nameKey = 'Name';
 console.log(sam['first' + nameKey]);
 console.log(sam['last' + nameKey]);
 
+const interestedIn = prompt('What do you want to know about Sam? Choose between firstName, lastName, age, job or friends');
+// console.log(sam[interestedIn]); // BRACKET MADE IT POSSIBLE AS IT DIDNT HAVE TO DEFINE AN PROPERTY (THIS WOULDNT WORK WITH .)
+
+if(sam[interestedIn]) {
+  console.log(sam[interestedIn]);
+} else {
+  console.log('Please try again! Choose between firstName, lastName, age, job or friends');
+}
+
+sam.location = 'IOM';
+sam['footballTeam'] = 'Norwich';
+console.log(sam);
+*/
+
+///////////////////////////////////////////////////////////////
+
+// CODING CHALLENGE
+
+// TEST 6
+
+// TO WRITE 'SAM HAS 3 FRIENDS AND HIS BEST FRIEND IS MICHAEL, AS JS CODE
+
+const sam = {
+  firstName: 'Sam',
+  lastName: 'Kebbell',
+  age: 2024 - 1997,
+  job: 'Legend',
+  friends: ['Michael', 'Steven', 'John']
+}
+
+console.log(`${sam.firstName} has ${sam.friends.length} friends, and his best friend is called ${sam.friends[0]}`)
