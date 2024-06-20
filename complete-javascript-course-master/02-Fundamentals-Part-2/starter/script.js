@@ -244,6 +244,9 @@ if (friends.includes('Steven')) {
 // CODING CHALLENGE
 
 // TEST 5
-let totalBill = 125
+let bill = 125
 
-const calTip = totalBill >=
+const calTip = function (bill) {
+  return bill >= 50 && bill <= 300 ? bill * .2 : bill * .15;
+  console.log(`The total bill is now ${bill}`);
+}
