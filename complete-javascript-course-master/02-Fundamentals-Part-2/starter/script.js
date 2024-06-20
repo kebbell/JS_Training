@@ -264,3 +264,20 @@ console.log(total);
 
 // OJECTS L39
 
+const sam = {
+  firstName: 'Sam',
+  lastName: 'Kebbell',
+  age: 2024 - 1997,
+  job: 'Legend',
+  friends: ['Michael', 'Steven', 'John']
+}
+
+console.log(sam); 
+
+console.log(sam.lastName); // . CANN NOT BE A STRING, IT HAS TO BE A PROPERTY NAME
+console.log(sam['lastName']); // BRACKETS CAN USE ANY NAME
+
+const nameKey = 'Name';
+console.log(sam['first' + nameKey]);
+console.log(sam['last' + nameKey]);
+
