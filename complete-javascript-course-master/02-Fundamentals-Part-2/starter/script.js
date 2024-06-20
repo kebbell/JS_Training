@@ -203,6 +203,7 @@ console.log(age);
 */
 
 // ADD ELEMENTS
+/*
 const friends = ['Michael', 'Steven', 'John'];
 const newFriend = friends.push('Sam'); // push adds to the end annd putting it in a variable (newFriends) this can help to find the length
 // .PUSH RETURNS A VALUE SO ADDING THE VARIABLE INFRONT MAKES IT ABLE TO SHOW IT. .PUSH RETURNS THE LENGTH
@@ -236,4 +237,13 @@ if (friends.includes('Steven')) {
 } else {
   console.log('No friends');
 }
+*/
 
+////////////////////////////////////////////////////////
+
+// CODING CHALLENGE
+
+// TEST 5
+let totalBill = 125
+
+const calTip = totalBill >=
