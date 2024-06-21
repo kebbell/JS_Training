@@ -317,13 +317,13 @@ console.log(`${sam.firstName} has ${sam.friends.length} friends, and his best fr
 
 // OBJECT METHODS L41
 
-const sam = {
-  firstName: 'Sam',
-  lastName: 'Kebbell',
-  birthYear: 1997,
-  job: 'Legend',
-  friends: ['Michael', 'Steven', 'John'],
-  hasDriversLicense: true,
+// const sam = {
+//   firstName: 'Sam',
+//   lastName: 'Kebbell',
+//   birthYear: 1997,
+//   job: 'Legend',
+//   friends: ['Michael', 'Steven', 'John'],
+//   hasDriversLicense: true,
 
   // calcAge: function (birthYear) {
   //   return 2024 - birthYear;
@@ -333,19 +333,40 @@ const sam = {
   //   return 2024 - this.birthYear; //this helps the NO REPEAT RULE
   // }
 
-  calcAge: function () {
-    this.age = 2024 - this.birthYear; 
-    return this.age; // USING THIS.AGE HELPS LATER TO LOG MULTIPLE AS SHOWN BELOW WITH THE 3 CONSOLE LOGS
-  }
-};
+  // calcAge: function () {
+  //   this.age = 2024 - this.birthYear; 
+  //   return this.age; 
+    // USING THIS.AGE HELPS LATER TO LOG MULTIPLE AS SHOWN BELOW WITH THE 3 CONSOLE LOGS
+
+    // HELPS WITH ONLY DOING THE CALCULATION ONCE AND BEING ABLE TO USE MULTIPLE TIMES
+//   }
+// };
 
 // BECAUSE calcAGE IS BEING CALLED FROM SAM BELOW, ABOVE THE FUNCTION SHOULDNT REPEAT ITTSELF AND USE THIS. INSTEAD AS THIS WILL HELP THE NR RULE AND IF ANYTHING IS CHANGED, YOU DONTT HAVE TO UPDATE THE FUNCTION
 
-console.log(sam.calcAge()); 
+// console.log(sam.calcAge()); 
 
 // console.log(sam['calcAge'](1997));
 
-console.log(sam.age);
-console.log(sam.age);
-console.log(sam.age);
+// console.log(sam.age);
+// console.log(sam.age);
+// console.log(sam.age);
 
+///////////////////////////////////////////////////////////////////////////////
+
+// CODING CHALLENGE
+
+// TEST 7
+
+// 'SAM IS A 27 YEAR OLD (JOB) AND HE HAS A DRIVERS LICENSE' WRITTEN IS JS CODE
+
+const sam = {
+  firstName: 'Sam',
+  lastName: 'Kebbell',
+  birthYear: 1997,
+  job: 'Legend',
+  friends: ['Michael', 'Steven', 'John'],
+  hasDriversLicense: true
+}
+
+console.log(`${sam.firstName} is a ${2024 - sam.birthYear} year old ${sam.job} and `)
