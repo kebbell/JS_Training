@@ -396,7 +396,7 @@ console.log(`${sam.firstName} has ${sam.friends.length} friends, and his best fr
 // CODING CHALLENGE
 
 // TEST 7
-
+/*
 const mark = {
   firstName: 'Mark',
   lastName: 'Miller',
@@ -430,4 +430,8 @@ if (john.calcBMI > mark.calcBMI) {
   console.log(`${john.firstName}'s BMI (${john.calcBMI()}) is higher than ${mark.firstName}'s (${mark.calcBMI()})`)
 } else {
   console.log(`${mark.firstName}'s BMI (${mark.calcBMI()}) is higher than ${john.firstName}'s (${john.calcBMI()})`)
-}
+};
+*/
+
+// LOOPS L43
+
