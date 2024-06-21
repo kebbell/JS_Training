@@ -435,3 +435,9 @@ if (john.calcBMI > mark.calcBMI) {
 
 // LOOPS L43
 
+//console.log('Lifting weights reps 1');
+
+// FOR LOOP KEEPS RUNNNING WHILE CONDITION IS TRUE
+for(let rep = 1; rep <= 10; rep++) {
+  console.log(`Lifting weights reps ${rep}`);
+}
