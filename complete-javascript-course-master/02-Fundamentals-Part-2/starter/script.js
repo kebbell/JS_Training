@@ -369,14 +369,6 @@ console.log(`${sam.firstName} has ${sam.friends.length} friends, and his best fr
 //   hasDriversLicense: true
 // }
 
-// if (sam.hasDriversLicense) {
-// console.log(`${sam.firstName} is a ${2024 - sam.birthYear} year old ${sam.job} and has a drivers license`);
-// } else {
-//   console.log(`${sam.firstName} is a ${2024 - sam.birthYear} year old ${sam.job} and doesn't have a drivers license`);
-// };
-
-// ^^ MY VERSION
-
 // const sam = {
 //   firstName: 'Sam',
 //   lastName: 'Kebbell',
@@ -405,4 +397,35 @@ console.log(`${sam.firstName} has ${sam.friends.length} friends, and his best fr
 
 // TEST 7
 
+const mark = {
+  firstName: 'Mark',
+  lastName: 'Miller',
+  mass: 78,
+  height: 1.69,
 
+  calcBMI: function() {
+    this.bmi = this.mass / (this.height * this.height);
+    return this.bmi;
+  },
+}  
+console.log(mark.calcBMI());
+
+const john = {
+  firstName: 'John',
+  lastName: 'Smith',
+  mass: 92,
+  height: 1.95,
+
+  calcBMI: function() {
+    this.bmi = this.mass / (this.height * this.height);
+    return this.bmi;
+  },
+}
+
+console.log(john.calcBMI());
+
+if (john.calcBMI > mark.calcBMI) {
+  console.log(`${john.firstName}'s BMI (${john.calcBMI}) is higher than ${mark.firstName}'s (${mark.calcBMI})`)
+} else {
+  console.log(`${mark.firstName}'s BMI (${mark.calcBMI()}) is higher than ${john.firstName}'s (${john.calcBMI()})`)
+}
