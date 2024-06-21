@@ -329,8 +329,13 @@ const sam = {
   //   return 2024 - birthYear;
   // }
 
+  // calcAge: function () {
+  //   return 2024 - this.birthYear; //this helps the NO REPEAT RULE
+  // }
+
   calcAge: function () {
-    return 2024 - this.birthYear; //this helps the NO REPEAT RULE
+    this.age = 2024 - this.birthYear; 
+    return
   }
 };
 
