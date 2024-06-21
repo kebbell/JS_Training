@@ -360,13 +360,49 @@ console.log(`${sam.firstName} has ${sam.friends.length} friends, and his best fr
 
 // 'SAM IS A 27 YEAR OLD (JOB) AND HE HAS A DRIVERS LICENSE' WRITTEN IS JS CODE
 
-const sam = {
-  firstName: 'Sam',
-  lastName: 'Kebbell',
-  birthYear: 1997,
-  job: 'Legend',
-  friends: ['Michael', 'Steven', 'John'],
-  hasDriversLicense: true
-}
+// const sam = {
+//   firstName: 'Sam',
+//   lastName: 'Kebbell',
+//   birthYear: 1997,
+//   job: 'Legend',
+//   friends: ['Michael', 'Steven', 'John'],
+//   hasDriversLicense: true
+// }
 
-console.log(`${sam.firstName} is a ${2024 - sam.birthYear} year old ${sam.job} and `)
+// if (sam.hasDriversLicense) {
+// console.log(`${sam.firstName} is a ${2024 - sam.birthYear} year old ${sam.job} and has a drivers license`);
+// } else {
+//   console.log(`${sam.firstName} is a ${2024 - sam.birthYear} year old ${sam.job} and doesn't have a drivers license`);
+// };
+
+// ^^ MY VERSION
+
+// const sam = {
+//   firstName: 'Sam',
+//   lastName: 'Kebbell',
+//   birthYear: 1997,
+//   job: 'Legend',
+//   friends: ['Michael', 'Steven', 'John'],
+//   hasDriversLicense: true,
+
+//   calcAge: function () {
+//   this.age = 2024 - this.birthYear; 
+//   return this.age;
+//   },
+
+//   getSummary: function() {
+//     return `${this.firstName} is a ${this.calcAge()} ${sam.job} and he has ${this.hasDriversLicense ? 'a' : 'no'} drivers license.`
+//   }
+// };
+
+// console.log(sam.getSummary());
+
+// Jonas Answer ^^
+
+//////////////////////////////////////////////////////////////////////////////////////
+
+// CODING CHALLENGE
+
+// TEST 7
+
+
