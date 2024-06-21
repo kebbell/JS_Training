@@ -303,13 +303,31 @@ console.log(sam);
 // TEST 6
 
 // TO WRITE 'SAM HAS 3 FRIENDS AND HIS BEST FRIEND IS MICHAEL, AS JS CODE
-
+/*
 const sam = {
   firstName: 'Sam',
   lastName: 'Kebbell',
   age: 2024 - 1997,
   job: 'Legend',
   friends: ['Michael', 'Steven', 'John']
-}
+};
 
-console.log(`${sam.firstName} has ${sam.friends.length} friends, and his best friend is called ${sam.friends[0]}`)
+console.log(`${sam.firstName} has ${sam.friends.length} friends, and his best friend is called ${sam.friends[0]}`);
+*/
+
+// OBJECT METHODS L41
+
+const sam = {
+  firstName: 'Sam',
+  lastName: 'Kebbell',
+  birthYear: 1997,
+  job: 'Legend',
+  friends: ['Michael', 'Steven', 'John'],
+  hasDriversLicense: true
+
+  calcAge: function (birthYear) {
+    return 2024 - birthYear;
+  }
+};
+
+console.log(sam.calcAge(1997));
