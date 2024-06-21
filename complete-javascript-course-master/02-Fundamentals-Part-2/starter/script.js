@@ -323,11 +323,21 @@ const sam = {
   birthYear: 1997,
   job: 'Legend',
   friends: ['Michael', 'Steven', 'John'],
-  hasDriversLicense: true
+  hasDriversLicense: true,
 
-  calcAge: function (birthYear) {
-    return 2024 - birthYear;
+  // calcAge: function (birthYear) {
+  //   return 2024 - birthYear;
+  // }
+
+  calcAge: function () {
+    return 2024 - this.birthYear; //this helps the NO REPEAT RULE
   }
 };
 
-console.log(sam.calcAge(1997));
+// BECAUSE calcAGE IS BEING CALLED FROM SAM BELOW, ABOVE THE FUNCTION SHOULDNT REPEAT ITTSELF AND USE THIS. INSTEAD AS THIS WILL HELP THE NR RULE AND IF ANYTHING IS CHANGED, YOU DONTT HAVE TO UPDATE THE FUNCTION
+
+console.log(sam.calcAge()); 
+
+// console.log(sam['calcAge'](1997));
+
+
