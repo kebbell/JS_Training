@@ -335,7 +335,7 @@ const sam = {
 
   calcAge: function () {
     this.age = 2024 - this.birthYear; 
-    return
+    return this.age; // USING THIS.AGE HELPS LATER TO LOG MULTIPLE AS SHOWN BELOW WITH THE 3 CONSOLE LOGS
   }
 };
 
@@ -345,4 +345,7 @@ console.log(sam.calcAge());
 
 // console.log(sam['calcAge'](1997));
 
+console.log(sam.age);
+console.log(sam.age);
+console.log(sam.age);
 
