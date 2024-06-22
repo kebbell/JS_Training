@@ -270,9 +270,9 @@ const sam = {
   lastName: 'Kebbell',
   age: 2024 - 1997,
   job: 'Legend',
-  friends: ['Michael', 'Steven', 'John']
+  fr
+iends: ['Michael', 'Steven', 'John']
 }
-
 console.log(sam); 
 
 console.log(sam.lastName); // . CANN NOT BE A STRING, IT HAS TO BE A PROPERTY NAME
@@ -438,7 +438,16 @@ if (john.calcBMI > mark.calcBMI) {
 //console.log('Lifting weights reps 1');
 
 // FOR LOOP KEEPS RUNNNING WHILE CONDITION IS TRUE
+/*
 for(let rep = 1; rep <= 10; rep++) {
   console.log(`Lifting weights reps ${rep}`);
 }
+*/
 
+const sam = [
+  'Sam', 
+  'Kebbell', 
+  2024 - 1997, 
+  'Legend', 
+  ['Michael', 'Steven', 'John']
+];
