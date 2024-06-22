@@ -444,10 +444,14 @@ for(let rep = 1; rep <= 10; rep++) {
 }
 */
 
-const sam = [
+const samArray = [
   'Sam', 
   'Kebbell', 
   2024 - 1997, 
   'Legend', 
   ['Michael', 'Steven', 'John']
 ];
+
+for (let i = 0; i < 5 ; i++) {
+  console.log(sam[i]);
+}
