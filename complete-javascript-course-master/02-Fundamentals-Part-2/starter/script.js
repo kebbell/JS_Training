@@ -470,3 +470,12 @@ for (let i = 0; i < sam.length; i++) {
 }
 console.log(types);
 
+const years = [1991, 2007, 2009, 2013, 2019];
+const ages = [];
+
+for (let i = 0; i < years.length; i++) {
+  ages.push (2024 - years[i]);
+}
+
+console.log(ages);
+
