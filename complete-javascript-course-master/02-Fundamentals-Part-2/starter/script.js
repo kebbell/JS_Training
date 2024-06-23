@@ -496,7 +496,7 @@ for (let i = 0; i < sam.length; i++) {
 }
 */
 // LOOPING BACKWARDS & LOOPS IN LOOPS L45
-
+/*
 const sam = [
   'Sam', 
   'Kebbell', 
@@ -519,5 +519,15 @@ for (let exercise = 1; exercise < 4; exercise++) {
     console.log(`Exercise ${exercise}, Lifting weights rep ${rep} 🏋🏽‍♀️`)
   }
 }
+*/
 
 //  WHILE LOOP L46
+
+for(let rep = 1; rep <= 10; rep++) {
+  console.log(`Lifting weights reps ${rep}`);
+}
+
+let rep = 1;
+while (rep <= 10) {
+  console.log(`WHILE: Lifting weights reps ${rep}`); rep++;
+}
