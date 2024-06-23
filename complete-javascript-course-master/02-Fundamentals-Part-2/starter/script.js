@@ -523,9 +523,9 @@ for (let exercise = 1; exercise < 4; exercise++) {
 
 //  WHILE LOOP L46
 
-for(let rep = 1; rep <= 10; rep++) {
-  console.log(`Lifting weights reps ${rep}`);
-}
+// for (let rep = 1; rep <= 10; rep++) {
+//   console.log(`Lifting weights reps ${rep}`);
+// }
 
 let rep = 1;
 while (rep <= 10) {
