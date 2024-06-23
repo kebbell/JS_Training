@@ -444,16 +444,24 @@ for(let rep = 1; rep <= 10; rep++) {
 }
 */
 
-const samArray = [
+const sam = [
   'Sam', 
   'Kebbell', 
   2024 - 1997, 
   'Legend', 
-  ['Michael', 'Steven', 'John']
+  ['Michael', 'Steven', 'John'],
+  true
 ];
 
 for (let i = 0; i < 5; i++) {
   console.log(sam[i]); // (LET) THEN FIRST IS THE START SO I = 0, THEN FOR HOW LONG SO I < 5 AND THEN BY HOW MANY SO I++ TO ADD 1 EACH TIME.
 }
 
+// INSTEAD OF HARD CODING THE 2ND POINT (I < 5) YOU SHOULD AMEND MAKE IT SAM.LENGTH SO IT COVERS THE ENTIRE LENGTH OF THE ARRAY
+
+for (let i = 0; i < sam.length; i++) {
+  console.log(sam[i]);
+}
+
+// IF LENGTH OF ARRAY IS AMENDED NOW YOU DONT HAVE TO EDIT THE FOR LOOP
 
