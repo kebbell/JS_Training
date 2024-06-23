@@ -526,7 +526,7 @@ for (let exercise = 1; exercise < 4; exercise++) {
 // for (let rep = 1; rep <= 10; rep++) {
 //   console.log(`Lifting weights reps ${rep}`);
 // }
-
+/*
 let rep = 1;
 while (rep <= 10) {
   // console.log(`WHILE: Lifting weights reps ${rep}`); rep++;
@@ -539,4 +539,36 @@ while (dice !== 6) {
   console.log(`You rolled a ${dice}`);
   let dice = Math.trunc(Math.random() * 6) + 1;
   if (dice === 6) console.log('You rolled a 6 🎲')
+}
+*/
+
+/////////////////////////////////////////////////////
+
+// CODING CHALLENGE
+
+// TEST 8
+
+const bills = [
+  22,
+  295,
+  176,
+  440,
+  37,
+  105,
+  10,
+  1100,
+  86,
+  52,
+];
+
+const tips = [];
+
+const totals = [];
+
+const calcTip = bill => bill >= 50 && bill <= 300 ? bill * .15 : bill * .2;
+
+console.log(calcTip);
+
+for (let i = 0; i <= 10; i++) {
+  tips = [calcTip(bills[i])];
 }
