@@ -443,15 +443,15 @@ for(let rep = 1; rep <= 10; rep++) {
   console.log(`Lifting weights reps ${rep}`);
 }
 */
-
-const sam = [
-  'Sam', 
-  'Kebbell', 
-  2024 - 1997, 
-  'Legend', 
-  ['Michael', 'Steven', 'John'],
-  true
-];
+/*
+// const sam = [
+//   'Sam', 
+//   'Kebbell', 
+//   2024 - 1997, 
+//   'Legend', 
+//   ['Michael', 'Steven', 'John'],
+//   true
+// ];
 const types = [];
 
 for (let i = 0; i < 5; i++) {
@@ -493,4 +493,29 @@ for (let i = 0; i < sam.length; i++) {
   if (typeof sam[i] === 'nnumber') break;
 
   console.log(sam[i], typeof sam[i]);
+}
+*/
+// LOOPING BACKWARDS & LOOPS IN LOOPS
+
+const sam = [
+  'Sam', 
+  'Kebbell', 
+  2024 - 1997, 
+  'Legend', 
+  ['Michael', 'Steven', 'John'],
+  true
+];
+
+// LOOPING FROM 4 --> 0
+
+for (let i = sam.length - 1; i >= 0; i--) {
+  console.log(i, sam[i]);
+}
+
+for (let exercise = 1; exercise < 4; exercise++) {
+  console.log(`------------ Starting Exercise ${exercise}`);
+
+  for (let rep = 1; rep <= 10; rep++){
+    console.log(`Lifting weights, rep ${rep} 🏋🏽‍♀️`)
+  }
 }
