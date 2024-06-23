@@ -452,6 +452,8 @@ const samArray = [
   ['Michael', 'Steven', 'John']
 ];
 
-for (let i = 0; i < 5 ; i++) {
-  console.log(sam[i]);
+for (let i = 0; i < 5; i++) {
+  console.log(sam[i]); // (LET) THEN FIRST IS THE START SO I = 0, THEN FOR HOW LONG SO I < 5 AND THEN BY HOW MANY SO I++ TO ADD 1 EACH TIME.
 }
+
+
