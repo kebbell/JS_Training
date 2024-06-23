@@ -479,3 +479,18 @@ for (let i = 0; i < years.length; i++) {
 
 console.log(ages);
 
+// CONTINUE & BREAK
+
+console.log('---- ONLY STRINGS ----')
+for (let i = 0; i < sam.length; i++) {
+  if (typeof sam[i] !== 'string') continue;
+
+  console.log(sam[i], typeof sam[i]);
+}
+
+console.log('---- BREAK WITH NUMBER ----')
+for (let i = 0; i < sam.length; i++) {
+  if (typeof sam[i] === 'nnumber') break;
+
+  console.log(sam[i], typeof sam[i]);
+}
