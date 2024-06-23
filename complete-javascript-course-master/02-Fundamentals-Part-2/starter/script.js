@@ -452,16 +452,21 @@ const sam = [
   ['Michael', 'Steven', 'John'],
   true
 ];
+const types = [];
 
 for (let i = 0; i < 5; i++) {
   console.log(sam[i]); // (LET) THEN FIRST IS THE START SO I = 0, THEN FOR HOW LONG SO I < 5 AND THEN BY HOW MANY SO I++ TO ADD 1 EACH TIME.
 }
-
-// INSTEAD OF HARD CODING THE 2ND POINT (I < 5) YOU SHOULD AMEND MAKE IT SAM.LENGTH SO IT COVERS THE ENTIRE LENGTH OF THE ARRAY
+// INSTEAD OF HARD CODING THE 2ND POINT (I < 5) YOU SHOULD AMEND MAKE IT SAM.LENGTH SO IT COVERS THE ENTIRE LENGTH OF THE ARRAY.
+// IF LENGTH OF ARRAY IS AMENDED NOW YOU DONT HAVE TO EDIT THE FOR LOOP.
 
 for (let i = 0; i < sam.length; i++) {
-  console.log(sam[i]);
-}
+  // READING FROM SAM ARRAY
+  console.log(sam[i], typeof sam[i]);
 
-// IF LENGTH OF ARRAY IS AMENDED NOW YOU DONT HAVE TO EDIT THE FOR LOOP
+  // FILLING TYPES ARRAY
+  // types[i] = typeof sam[i];
+  types.push(typeof sam[i]); // CLEANER THAN THE ABOVE BUT BOTH DO THE SAME
+}
+console.log(types);
 
