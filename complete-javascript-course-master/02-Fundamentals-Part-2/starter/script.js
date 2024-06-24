@@ -572,3 +572,5 @@ console.log(calcTip);
 for (let i = 0; i <= 10; i++) {
   tips = [calcTip(bills[i])];
 }
+
+
