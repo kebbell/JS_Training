@@ -53,6 +53,7 @@ console.log(amplitudeNew)
 
 // DEBUGGING
 
+/*
 const measureKelvin = function () {
   const measurement = {
     type: 'temp',
@@ -99,6 +100,7 @@ return max - min; // ALWAYS RETURN WHAT YOU WANT LOGGED SO IN THIS CASE THE TEMP
 const amplitudeBug = calcTempAmplitudeBug([3, 5, 1], [9, 4, 5]); 
 // A = IDENTIFY BUG
 console.log(amplitudeBug)
+*/
 
 ///////////////////////////////////////////////////////////////////
 
@@ -106,6 +108,37 @@ console.log(amplitudeBug)
 
 // TEST 9
 
-const temp = {17, 21, 23};
+const temp = [17, 21, 23];
 
-console.log(`...${temp.length[0]}ºC on day 1 ...${temp.length[1]}ºC on day 2 ...${temp.length[2]} on day 3`);
+console.log(`...${temp[0]}ºC on day 1 ...${temp[1]}ºC on day 2 ...${temp[2]}ºC on day 3`);
+
+const tempNew = [12, 5, -5, 0, 4];
+
+console.log(`...${tempNew[0]}ºC on day 1 ...${tempNew[1]}ºC on day 2 ...${tempNew[2]}ºC on day 3 ...${tempNew[3]}ºC on day 4 ... ${tempNew[4]}ºC on day 5`);
+
+
+// BELOW IS THE ANSWER
+
+// 1) Understanding the problem
+// - Array transformed to string, separated by ...
+// - What is the X days? Answer: index + 1
+
+// 2) Breaking up into sub-problems
+// - Transform array into string
+// - Transform each element to string with ºC
+// - Strings needs to contain day (index + 1)
+// - Add ... between elements and start and end of string
+// - Log string to console
+
+const data1 = [17, 21, 23];
+const data2 = [12, 5, -5, 0, 4];
+
+const printForecast = function(arr) {
+  let str = '';
+  for(let i = 0; i < arr.length; i++) {
+    str = str + `${arr[i]}ºC in ${i+1} days ... `;
+  }
+  console.log('...' + str);
+};
+
+printForecast(data1);
