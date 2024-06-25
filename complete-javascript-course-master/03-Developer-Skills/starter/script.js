@@ -50,3 +50,18 @@ return max - min; // ALWAYS RETURN WHAT YOU WANT LOGGED SO IN THIS CASE THE TEMP
 const amplitudeNew = calcTempAmplitudeNew(temperatures); // REMEBER TTO ALWAYS CALL THE FUNCTION
 console.log(amplitudeNew)
 */
+
+// DEBUGGING
+
+const measureKelvin = function() {
+  const measurement = {
+    type: 'temp',
+    unit: 'celsius',
+    value: prompt('Degrees celsius:')
+  }
+
+  const kelvin = measurement.value + 273;
+  return kelvin;
+}
+
+console.log(measureKelvin);
