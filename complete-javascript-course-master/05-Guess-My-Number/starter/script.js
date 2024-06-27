@@ -64,8 +64,11 @@ document.querySelector('.check').addEventListener('click', function () {
 document.querySelector('.again').addEventListener('click', function(){
   score = 5;
   secretNumber = Math.trunc(Math.random()*20)+1;
-  document.querySelector('body').style.backgroundColor = '#222';
-  document.querySelector('.message').textContent = origin
-  document.querySelector('.number').textContent = origin
 
+  document.querySelector('.message').textContent = 'Start guessing...';
+  document.querySelector('.score').textContent = score;
+  document.querySelector('.number').textContent = '?';
+  document.querySelector('.guess').value = '';
+  document.querySelector('.number').style.width = '15rem';
+  document.querySelector('body').style.backgroundColor = '#222';
 })
