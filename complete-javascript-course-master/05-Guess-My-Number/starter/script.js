@@ -12,10 +12,8 @@ document.querySelector('.guess').value = 23;
 console.log(document.querySelector('.guess').value);
 */
 
-
-const secretNumber = Math.trunc(Math.random()*20)+1;
+let secretNumber = Math.trunc(Math.random() * 20) + 1;
 let score = 5;
-
 
 document.querySelector('.check').addEventListener('click', function () {
   const guess = Number(document.querySelector('.guess').value);
@@ -41,7 +39,7 @@ document.querySelector('.check').addEventListener('click', function () {
       document.querySelector('.score').textContent = score;
     } else {
       document.querySelector('.message').textContent = 'YOU LOST';
-      document.querySelector('.number').textContent = secretNumber
+      document.querySelector('.number').textContent = secretNumber;
       document.querySelector('.score').textContent = 0;
       document.querySelector('body').style.backgroundColor = '#fb1f1f';
     }
@@ -54,16 +52,16 @@ document.querySelector('.check').addEventListener('click', function () {
       document.querySelector('.score').textContent = score;
     } else {
       document.querySelector('.message').textContent = 'YOU LOST';
-      document.querySelector('.number').textContent = secretNumber
+      document.querySelector('.number').textContent = secretNumber;
       document.querySelector('.score').textContent = 0;
       document.querySelector('body').style.backgroundColor = '#fb1f1f';
     }
   }
-})
+});
 
-document.querySelector('.again').addEventListener('click', function(){
+document.querySelector('.again').addEventListener('click', function () {
   score = 5;
-  secretNumber = Math.trunc(Math.random()*20)+1;
+  secretNumber = Math.trunc(Math.random() * 20) + 1;
 
   document.querySelector('.message').textContent = 'Start guessing...';
   document.querySelector('.score').textContent = score;
@@ -71,4 +69,5 @@ document.querySelector('.again').addEventListener('click', function(){
   document.querySelector('.guess').value = '';
   document.querySelector('.number').style.width = '15rem';
   document.querySelector('body').style.backgroundColor = '#222';
-})
+});
+
