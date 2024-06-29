@@ -13,11 +13,11 @@ const btnNew = document.querySelector('.btn--new');
 const btnRoll = document.querySelector('.btn--roll');
 const btnHold = document.querySelector('.btn--hold');
 
-// const modal = document.querySelector('.modal');
-// const overlay = document.querySelector('.overlay');
-// const btnCloseModal = document.querySelector('.close-modal');
-// const btnsOpenModal = document.querySelectorAll('.show-modal');
-// const closeBtn = document.querySelector('.close-modal');
+const modal = document.querySelector('.modal');
+const overlay = document.querySelector('.overlay');
+const btnCloseModal = document.querySelector('.close-modal');
+const btnsOpenModal = document.querySelectorAll('.btn--play');
+const closeBtn = document.querySelector('.close-modal');
 
 score1.textContent = 0;
 score2.textContent = 0;
@@ -87,25 +87,27 @@ btnHold.addEventListener('click', function () {
   }
 });
 
-btnNew.addEventListener('click', function() {
-  // 1. WHEN CLICKED RESET THE PAGE TO ORIGINAL - REMOVE SCORES, BACKGROUND AND DICE
-  activePlayer = 0;
-  currentScore = 0;
-  // score2 = 0;
-  // score1 = 0;
-  diceL.classList.add('hidden');
-  document
-  .querySelector(`.player--${activePlayer}`)
-  .classList.remove('player--winner');
+btnNew.addEventListener('click', function () {
+  btnNew.addEventListener('click', function () {
+    // 1. RESET SCORES AND UI ELEMENTS
+    scores[0] = 0;
+    scores[1] = 0;
+    score1.textContent = 0;
+    score2.textContent = 0;
+    current1.textContent = 0;
+    current2.textContent = 0;
+    diceL.classList.add('hidden');
 
+    player1.classList.remove('player--winner');
+    player2.classList.remove('player--winner');
+    player1.classList.add('player--active');
+    player2.classList.remove('player--active');
 
-  // 2. START AGAIN WITH PLAYER 1
-  document.getElementById(`current--${activePlayer}`).textContent = 0;
-  activePlayer = activePlayer === 0 ? 1 : 0;
-  currentScore = 0;
-  player1.classList.add('player--active'); // TOGGLE WILL ADD IF NOT THERE OR REMOVERS IF IT IS THERE
-  player2.classList.remove('player--active'); // TOGGLE WILL ADD IF NOT THERE OR REMOVERS IF IT IS THERE
-  // 3. 
+    // 2. RESET GAME VARIABLES
+    playing = true;
+    activePlayer = 0;
+    currentScore = 0;
+  });
 });
 
 // BELOW FUNCTION WORKS WITH THE EVENT LISTENERS BELOW (BTNSOPENMODAL) //
@@ -113,6 +115,7 @@ const openModal = function () {
   modal.classList.remove('hidden');
   overlay.classList.remove('hidden');
 }
+
 // BELOW FUNCTION WORKS WITH THE EVENT LISTENERS BELOW (BTNCLOSEMODAL & OVERLAY) //
 const closeModal = function () {
   modal.classList.add('hidden');
@@ -121,15 +124,14 @@ const closeModal = function () {
 
 // BELOW FUNCTION WORKS WITH THE FUNCTIONS ABOVE //
 for (let i = 0; i < btnsOpenModal.length; i++)
-  btnsOpenModal[i].addEventListener ('click', openModal);
+  btnsOpenModal[i].addEventListener('click', openModal);
 
 btnCloseModal.addEventListener('click', closeModal);
 overlay.addEventListener('click', closeModal);
 
 // USING A KEY WITH EVENT LISTENER TO DO AN ACTION
 document.addEventListener('keydown', function(event) {
-
-  if(event.key === 'Escape' && !modal.classList.contains('hidden')) {
-      closeModal();
-    }
-  });
+  if (event.key === 'Escape' && !modal.classList.contains('hidden')) {
+    closeModal();
+  }
+});
