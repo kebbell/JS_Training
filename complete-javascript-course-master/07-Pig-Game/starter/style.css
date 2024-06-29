@@ -22,6 +22,10 @@ body {
   justify-content: center;
 }
 
+header {
+  display: block;
+}
+
 /* LAYOUT */
 main {
   position: relative;
@@ -123,6 +127,10 @@ main {
   box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
 }
 
+.btn:hover {
+  background-color: #fff;
+}
+
 /*
 .btn::first-letter {
   font-size: 2.4rem;
@@ -139,6 +147,10 @@ main {
 }
 .btn--hold {
   top: 46.1rem;
+}
+
+.btn--play {
+  top: 10rem;
 }
 
 .btn:active {

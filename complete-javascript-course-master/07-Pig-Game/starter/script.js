@@ -56,15 +56,18 @@ btnRoll.addEventListener('click', function () {
 });
 
 btnHold.addEventListener('click', function () {
-  if (playing) {
+  if (playing && currentScore > 0) {
     // 1. ADD CURRENT SCORE TO ACTIVE PLAYER SCORE
     scores[activePlayer] += currentScore;
     // scores [1] = scores [1] + currentScore IS WHAT IS ABOVE
     document.getElementById(`score--${activePlayer}`).textContent =
       scores[activePlayer];
 
+    // 3. SWITCH TO NEXT PLAYER
+    switchPlayer(); // CALLING FUNCTION FROM ABOVE - BROUGHT FORWARD SO IT WORKS WITH THE CURRENTSCORE > 0
+
     // 2. CHECK IF PLAYERS SCORE >= 100
-    if (scores[activePlayer] >= 100) {
+    if (scores[activePlayer] >= 50) {
       // FINISH GAME
       playing = false;
       diceL.classList.add('hidden');
@@ -74,9 +77,25 @@ btnHold.addEventListener('click', function () {
       document
         .querySelector(`.player--${activePlayer}`)
         .classList.remove('player--active');
-    } else {
-      // 3. SWITCH TO NEXT PLAYER
-      switchPlayer(); // CALLING FUNCTION FROM ABOVE
     }
   }
 });
+
+btnNew.addEventListener('click', function() {
+  // 1. WHEN CLICKED RESET THE PAGE TO ORIGINAL - REMOVE SCORES, BACKGROUND AND DICE
+  activePlayer = 0;
+  currentScore = 0;
+  diceL.classList.add('hidden');
+  document
+  .querySelector(`.player--${activePlayer}`)
+  .classList.remove('player--winner');
+
+
+  // 2. START AGAIN WITH PLAYER 1
+  document.getElementById(`current--${activePlayer}`).textContent = 0;
+  activePlayer = activePlayer === 0 ? 0 : 0;
+  currentScore = 0;
+  player1.classList.add('player--active'); // TOGGLE WILL ADD IF NOT THERE OR REMOVERS IF IT IS THERE
+  player2.classList.remove('player--active'); // TOGGLE WILL ADD IF NOT THERE OR REMOVERS IF IT IS THERE
+  // 3. 
+})
