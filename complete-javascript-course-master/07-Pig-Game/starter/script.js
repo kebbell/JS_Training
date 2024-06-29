@@ -72,8 +72,8 @@ btnHold.addEventListener('click', function () {
     // 3. SWITCH TO NEXT PLAYER
     switchPlayer(); // CALLING FUNCTION FROM ABOVE - BROUGHT FORWARD SO IT WORKS WITH THE CURRENTSCORE > 0
 
-    // 2. CHECK IF PLAYERS SCORE >= 100
-    if (scores[activePlayer] >= 50) {
+    // 2. CHECK IF PLAYERS SCORE >= 50
+    if (scores[activePlayer] > 49) {
       // FINISH GAME
       playing = false;
       diceL.classList.add('hidden');
