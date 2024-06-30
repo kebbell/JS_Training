@@ -88,7 +88,6 @@ btnHold.addEventListener('click', function () {
 });
 
 btnNew.addEventListener('click', function () {
-  btnNew.addEventListener('click', function () {
     // 1. RESET SCORES AND UI ELEMENTS
     scores[0] = 0;
     scores[1] = 0;
@@ -107,7 +106,6 @@ btnNew.addEventListener('click', function () {
     playing = true;
     activePlayer = 0;
     currentScore = 0;
-  });
 });
 
 // BELOW FUNCTION WORKS WITH THE EVENT LISTENERS BELOW (BTNSOPENMODAL) //
