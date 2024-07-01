@@ -1,6 +1,7 @@
 'use strict';
 /////////////////////////
 // FOR SCOPING
+
 /*
 function calcAge(birthYear) {
   const age = 2024 - birthYear;
@@ -30,6 +31,7 @@ calcAge(1997);
 // FOR HOISTING
 
 // Hoisting Variables
+
 /*
 console.log(me);
 // console.log(job);
@@ -61,6 +63,7 @@ const addArrowFunc = (a, b) => a + b;
 /////////////////////////
 // THIS KEYWORD
 
+/*
 // console.log(this);
 
 const calcAge = function (birthYear) {
@@ -95,3 +98,8 @@ matilda.calcAge();
 // 'THIS' FROM ABOVE IS BEINNG CALLED BY BOTH SAM AND MATILDA SO WILL PRESENT BOTH WHENN CALLED
 
 // THIS IS DYNAMIC AND NNOT STATIC
+*/
+
+//////////////////////////////////////
+// REGULAR FUNCS VS. ARROW FUNCS
+
