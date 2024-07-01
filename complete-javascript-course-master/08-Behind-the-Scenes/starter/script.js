@@ -45,7 +45,7 @@ console.log(addExpressionFunc(2,  3));
 function addDeclarationFunc(a, b) {
   return a + b;
 }
-// ONLY FUNCCTION DECLARATION CAN BE DEFINED BEFORE CALLING
+// ONLY FUNCTION DECLARATION CAN BE DEFINED BEFORE CALLING
 
 const addExpressionFunc = function (a, b) {
   return a + b;
@@ -53,4 +53,7 @@ const addExpressionFunc = function (a, b) {
 addExpressionFunc();
 
 const addArrowFunc = (a, b) => a + b;
+
+/////////////////////////
+// THIS KEYWORD 
 
