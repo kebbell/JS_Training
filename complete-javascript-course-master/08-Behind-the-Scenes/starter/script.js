@@ -20,3 +20,4 @@ function calcAge(birthYear) {
 
 const firstName = 'Sam';
 calcAge(1997);
+
