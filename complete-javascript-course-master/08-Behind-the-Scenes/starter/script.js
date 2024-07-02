@@ -174,4 +174,25 @@ addExpressionFunc(2, 5);
 const addArrowFunc = (a, b) => a + b; // ARGUMENNT KEYWORDS DO NOT WORK FOR ARROW FUNCS
 */
 
+/////////////////////////////
+// Primitives vs Objects (Primitive vs Reference Types) - BIG DIFFERENCE
 
+
+/*
+let age = 27;
+let oldAge = age;
+age = 28
+console.log(oldAge);
+console.log(age);
+
+const sam = {
+  name: 'Sam',
+  age: 27,
+}
+
+const friend = sam;
+friend.age = 28;
+
+console.log('Friend:', friend);
+console.log('Sam:', sam);
+*/
