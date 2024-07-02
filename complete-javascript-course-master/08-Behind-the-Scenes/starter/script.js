@@ -164,6 +164,7 @@ sam.calcAge(); // CASUES AN ERROR AS THE 'THIS' HAS TO BE UNDEFINED IN A FUNCTIO
 
 // ARGUMENTS KEYWORD
 
+/*
 const addExpressionFunc = function (a, b) {
   console.log(arguments); // WORKS
   return a + b;
@@ -171,5 +172,6 @@ const addExpressionFunc = function (a, b) {
 addExpressionFunc(2, 5);
 
 const addArrowFunc = (a, b) => a + b; // ARGUMENNT KEYWORDS DO NOT WORK FOR ARROW FUNCS
+*/
 
 
