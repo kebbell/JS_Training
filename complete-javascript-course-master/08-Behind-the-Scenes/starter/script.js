@@ -103,3 +103,73 @@ matilda.calcAge();
 //////////////////////////////////////
 // REGULAR FUNCS VS. ARROW FUNCS
 
+/*
+const sam = {
+  firstName: 'Sam',
+  year: 1997,
+  calcAge: function () {
+    // console.log(this);
+    console.log(2024 - this.year);
+
+    const self = this; // SELF OR THAT
+
+    // SOLUTION 1
+    /*
+    const isMillenial = function () {
+      console.log(self);
+      // console.log(this.year >= 1981 && this.year <= 1996); 
+      // CASUES AN ERROR AS THE 'THIS' HAS TO BE UNDEFINED IN A FUNCTION SO IT WONT WORK - YOU CAN MAKE IT A VARIABLE AND CALL IT THAT WAY (SELF)
+
+      console.log(self.year >= 1981 && self.year <= 1996); // NOW WORKS AS THE 'THIS' WAS CALLED OUTSIDE THE FUNCTION
+    };
+    isMillenial(); // CALL THE FUNCTION
+  },
+  */
+
+  /*
+
+  // SOLUTION 2
+  const isMillenial = () => {
+    console.log(this);
+    console.log(this.year >= 1981 && this.year <= 1996);
+  }
+  greet: () => {
+    console.log(this);
+    console.log(`Hey ${this.firstName}`) 
+  }
+  isMillenial();
+}
+
+
+sam.greet();
+
+sam.calcAge(); // CASUES AN ERROR AS THE 'THIS' HAS TO BE UNDEFINED IN A FUNCTION SO IT WONT WORK - YOU CAN MAKE IT A VARIABLE AND CALL IT THAT WAY
+
+// console.log(this.firstName); // UNDEFINED - NOT AN ERROR
+
+// BEST PRACTICE
+// NEVER USE VAR AS CAN CAUSE MANY ERRORS
+// NEVER USE ARROW FUNC AS A METHOD
+
+// greet: function () {
+//   console.log(`Hey ${this.firstName}`);
+// } // REG FUNC - 'THIS' KEYWORD WORKS
+
+
+// sam.greet();
+// console.log(this.firstName); // UNDEFINED - NOT AN ERROR
+
+*/
+
+
+// ARGUMENTS KEYWORD
+
+const addExpressionFunc = function (a, b) {
+  console.log(arguments); // WORKS
+  return a + b;
+};
+addExpressionFunc(2, 5);
+
+const addArrowFunc = (a, b) => a + b; // ARGUMENNT KEYWORDS DO NOT WORK FOR ARROW FUNCS
+
+
