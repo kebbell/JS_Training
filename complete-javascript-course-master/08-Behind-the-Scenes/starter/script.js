@@ -196,3 +196,43 @@ friend.age = 28;
 console.log('Friend:', friend);
 console.log('Sam:', sam);
 */
+
+// PRIMITIVES VS. OBJECTS
+
+// PRIMITIVES TYPES
+let lastName = 'Smith';
+let oldLastName = lastName;
+lastName = 'Davis';
+console.log(oldLastName);
+console.log(lastName)
+
+// REFERENCE TYPES
+const Jessica = {
+  firstName: 'Jessica',
+  lastName: 'Smith',
+  age: 27
+};
+
+const marriedJessica = Jessica;
+marriedJessica.lastName = 'Davis';
+console.log('Before marriage:', Jessica);
+console.log('After marriage: ', marriedJessica);
+
+// marriedJessica = {}; // DOES NOT WORK
+
+// Copying objects
+const jessica2 = {
+  firstName: 'Jessica',
+  lastName: 'Smith',
+  age: 27,
+  family: ['Alice', 'Bob']
+};
+
+const jessicaCopy = Object.assign({}, jessica2);
+jessicaCopy.lastName = 'Davis';
+
+jessicaCopy.family.push('Mary'); // NEEDS DEEP CLONING
+jessicaCopy.family.push('John'); // NEEDS DEEP CLONING
+
+console.log('Before marriage:', jessica2);
+console.log('After marriage: ', jessicaCopy);
