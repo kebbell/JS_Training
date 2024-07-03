@@ -12,25 +12,73 @@ const restaurant = {
   starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
   mainMenu: ['Pizza', 'Pasta', 'Risotto'],
 
+  openingHours: {
+    thu: {
+      open: 12,
+      close: 22,
+    },
+    fri: {
+      open: 11,
+      close: 23,
+    },
+    sat: {
+      open: 0, // Open 24 hours
+      close: 24,
+    },
+  },
+
   order: function (starterIndex, mainIndex) {
     return [this.starterMenu[starterIndex], this.mainMenu[starterIndex]];
   },
 
-  // openingHours: {
-  //   thu: {
-  //     open: 12,
-  //     close: 22,
-  //   },
-  //   fri: {
-  //     open: 11,
-  //     close: 23,
-  //   },
-  //   sat: {
-  //     open: 0, // Open 24 hours
-  //     close: 24,
-  //   },
-  // },
+  orderDelivery: function ({starterIndex, mainIndex, time, address}) {
+    console.log(`Order recieved! ${this.starterMenu[starterIndex]} and ${this.mainMenu[starterIndex]} will be delivered to ${address} at ${time}`);
+  }
 };
+
+restaurant.orderDelivery({
+  time: '22:30',
+  address: 'Ballamodha',
+  mainIndex: 2,
+  starterIndex: 2,
+}); // ARGUMENTS DONT HAVE TO BE IN ORDER
+
+//////////////////////////////////////////
+// DESTRUCTORING OBJECTS
+
+const { name, openingHours, categories } = restaurant;
+
+const {
+  name: restaurantName,
+  openingHours: hours,
+  categories: tags,
+} = restaurant;
+console.log(restaurantName, hours, tags);
+
+// DEFAULT VALUES
+const { menu = [], starterMenu: starters = [] } = restaurant;
+console.log(menu, starters);
+
+// MUTATING VARIALES
+let a = 111;
+let b = 999;
+const obj = { a: 23, b: 7, c: 14 };
+
+// TO REASSIGN USE PARRAMETES
+({ a, b } = obj);
+console.log(a, b); // OW A & B TAKE THE NEW VALUES
+
+// NESTED OBJECTS
+
+const {fri} = openingHours;
+console.log(fri);
+
+const {fri: {open, close}} = openingHours;
+console.log(open, close);
+
+/*
+////////////////////////////////////////
+// DESTRUCTURING THE ARRAY
 
 const arr = [2, 4, 6];
 
@@ -38,7 +86,7 @@ const a = arr[0];
 const b = arr[1];
 const c = arr[2];
 
-// DESTRUCTURING THE ARRAY
+
 const [x, y, z] = arr; // MUCH SHORTER QUICKER WAY OF DOING THE ABOVE
 // REMEMBER TO DECLARE THE VARIABLE WITH CONST
 console.log(a, b, c, x, y, z);
@@ -74,3 +122,4 @@ console.log(i, j, k);
 // DEFAULT VALUES
 const [p = 1, q = 1, r = 1] = [8, 9];
 console.log(p, q, r); // R HAS NO VALUE SO IT TAKES FROM THE R = 1
+*/
