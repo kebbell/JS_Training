@@ -47,14 +47,122 @@ const restaurant = {
     );
   },
 
-  orderPizza: function (mainIngredient, ...otherIngredients) { 
+  orderPizza: function (mainIngredient, ...otherIngredients) {
     console.log(mainIngredient);
     console.log(otherIngredients);
-  }
+  },
 };
 
+///////////////////////////////////
+// CODING CHALLENGE
+
+// TEST DATA 
 
 
+
+
+
+
+
+
+
+/*
+////////////////////////////
+//
+
+const rest1 = {
+  name: 'Capri',
+  // numGuests: 20,
+  numGuests: 0,
+};
+
+const rest2 = {
+  name: 'La Piazza',
+  owner: 'Giovanni Rossi',  
+}
+
+// OR ASSIGNMENT OPERATOR
+// rest1.numGuests = rest1.numGuests || 10;
+// rest2.numGuests = rest2.numGuests || 10;
+
+// rest1.numGuests ||= 10;
+// rest2.numGuests ||= 10;
+
+// NULLISH ASSIGNMENT OPERATOR
+rest1.numGuests ??= 10;
+rest2.numGuests ??= 10;
+
+rest1.owner &&= '<ANONYMOUS>';
+rest2.owner &&= '<ANONYMOUS>';
+
+console.log(rest1);
+console.log(rest2);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+////////////////////////////
+// NULLISH COALESCING OPERATOR
+
+restaurant.numGuests = 0
+const guests = restaurant.numGuests || 10;
+console.log(guests);
+
+// SHORT CIRCUITING NULLISH VALUES SO YOU CAN USE 0
+// NULLISH: null and undefined (NOT 0 or '') - DEFINED ABOVE
+const guestCorrect = restaurant.numGuests ?? 10; // NULLISH COALESCING
+console.log(guestCorrect);
+
+/*
+///////////////////////////////////
+// SHORT CIRCUITING (&& AND ||)
+
+// SHORT CIRCUITING WHEN TRUE
+console.log('--- OR ----');
+// Use ANY DATA TYPE, return ANY DATA TYPE, short-circuited
+console.log(3 || 'Jonas');
+console.log('' || 'jonas');
+console.log(true || 0);
+console.log(undefined || null);
+
+console.log(undefined || 0 || '' || 'Hello' || 23 || null);
+
+restaurant.numGuests = 0;
+const guests1 = restaurant.numGuests ? restaurant.numGuests : 21;
+console.log(guests1);
+
+const guests2 = restaurant.numGuests || 10;
+console.log(guests2);
+
+// SHORTCIRCUITING WHEN FALSE
+console.log('--- AND ----');
+
+console.log(0 && 'Jonas');
+
+console.log(7 && 'Jonas');
+
+console.log('Hello' && 23 && null && 'jonas');
+
+// Practical example
+if (restaurant.orderPizza) {
+  restaurant.orderPizza ('mushrooms', 'onion', 'spinach');
+}
+
+restaurant.orderPizza && restaurant.orderPizza ('mushrooms', 'onion', 'spinach');
+
+//
 /*
 
 // Destructuring
@@ -236,4 +344,5 @@ console.log(i, j, k);
 // DEFAULT VALUES
 const [p = 1, q = 1, r = 1] = [8, 9];
 console.log(p, q, r); // R HAS NO VALUE SO IT TAKES FROM THE R = 1
+
 */
