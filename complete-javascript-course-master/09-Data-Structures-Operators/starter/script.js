@@ -53,6 +53,27 @@ const restaurant = {
   },
 };
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 ///////////////////////////////////
 // CODING CHALLENGE
 
@@ -75,6 +96,8 @@ TEST DATA FOR 6: Use players 'Davies', 'Muller', 'Lewandowski' and 'Kimmich'. Th
 
 GOOD LUCK 😀
 */
+
+/*
 
 const game = {
   team1: 'Bayern Munich',
@@ -117,9 +140,52 @@ const game = {
   },
 };
 
+// const players1 = [
+//   ...game.players[0]
+// ];
+// const players2 = [ 
+//   ...game.players[1]
+// ];
+
+const [players1, players2] = game.players;
+
+// const gk = players1[0]; // THE GOALKEEPER
+// const fieldPlayers = [...players1.slice(1)]; // THE REMAINING FIELD PLAYERS - SLICE REMOVES THE FIRST ELEMENT
+
+const [gk, ...fieldPlayers] = players1;
+console.log(gk, fieldPlayers);
+
+const allPlayers = [...players1, ...players2];
+
+const players1Final = [...players1, 'Thiago', 'Coutinho', 'Perisic']
+console.log(players1Final);
+
+const {team1, x: draw, team2} = game.odds;
+
+// const team1 = game.odds.team1
+// const team2 = game.odds.team2
+// const draw = game.odds.draw
+
+console.log(players1, players2);
+console.log(gk, fieldPlayers);
 
 
+const printGoals = function (...players) {
+  console.log(`${players.length} goals were scored`);
+  }
+  printGoals(...game.scored);
 
+
+  team1 < team2 && console.log('Team 1 is more likely to win');
+  team1 > team2 && console.log('Team 2 is more likely to win');
+
+
+// MY VERSION WITH TURNARY OPERATOR
+// const likely = game.odds.team1 < game.odds.team2 ? 'Bayern Munich' : 'Borrussia Dortmund';
+
+// console.log(`The likely winner is ${likely}`);
+
+// game.odds.team1 < game.odds.team2 ? console.log('Bayern Munich') : console.log('Borrussia Dortmund');
 
 
 
