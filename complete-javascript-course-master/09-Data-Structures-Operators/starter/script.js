@@ -53,9 +53,41 @@ const restaurant = {
   },
 };
 
-if (restaurant.openingHours && restaurant.openingHours.mon)
-  console.log(restaurant.openingHours.mon.open);
+cons
 
+
+
+
+/*
+
+// PROPERTY NAMES
+const properties = Object.keys(openingHours);
+console.log(properties);
+
+let openStr = `We open on ${properties.length} days: `;
+for (const day of properties) {
+  openStr += `${day}, `;
+} 
+console.log(openStr);
+
+// PROPERTY VALUES
+const values = Object.values(openingHours);
+console.log(values);
+
+// ENTIRE OBJECT
+const entries = Object.entries(openingHours)
+// console.log(entries);
+
+// [ KEY, VALUE ]
+for (const [key, {open, close}] of entries) {
+  console.log(`On ${key}, we open at ${open} and close at ${close} `);
+}
+
+
+// if (restaurant.openingHours && restaurant.openingHours.mon)
+//   console.log(restaurant.openingHours.mon.open);
+
+/*
 // WITH OPTIONAL CHAINING
 console.log(restaurant.openingHours.mon?.open); // QUESTION MARK IS USED TO CHECK IF THE VARIABLE EXISTS - IF NOT, IT WONT PROCEED WITH THE REST OF THE CODE
 console.log(restaurant.openingHours?.mon?.open);
@@ -75,13 +107,6 @@ console.log(restaurant.orderRisotto?.(0, 1) ?? 'Method does not exist');
 const users = [{ name: 'Jonas', email: 'b5H8h@example.com' }];
 
 console.log(users[0]?.name ?? 'Users array empty'); // LOOK TO USE NULLISH EVERY TIME ??
-
-
-
-
-
-
-
 
 /*
 // FOR OF
