@@ -53,9 +53,20 @@ const restaurant = {
   },
 };
 
+if(restaurant.openingHours && restaurant.openingHours.mon) 
+  console.log(restaurant.openingHours.mon.open);
 
+// WITH OPTIONAL CHAINING
+console.log(restaurant.openingHours.mon?.open); // QUESTION MARK IS USED TO CHECK IF THE VARIABLE EXISTS - IF NOT, IT WONT PROCEED WITH THE REST OF THE CODE
+console.log(restaurant.openingHours?.mon?.open);
 
+const days = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
 
+for(const day of days) {
+console.log(day);
+const open = restaurant.openingHours[day]?.open ?? 'closed';
+console.log(`Open at ${open}`);
+}
 
 
 /*
