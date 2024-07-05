@@ -74,7 +74,11 @@ console.log(restaurant.orderRisotto?.(0, 1) ?? 'Method does not exist');
 // Arrays
 const users = [{ name: 'Jonas', email: 'b5H8h@example.com' }];
 
-console.log(users[0]?.name ?? 'Users array empty'); // LOOK TO USE NULLISH EVERYTIME ??
+console.log(users[0]?.name ?? 'Users array empty'); // LOOK TO USE NULLISH EVERY TIME ??
+
+
+
+
 
 
 
