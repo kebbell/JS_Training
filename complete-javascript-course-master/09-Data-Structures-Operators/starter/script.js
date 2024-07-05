@@ -53,7 +53,7 @@ const restaurant = {
   },
 };
 
-if(restaurant.openingHours && restaurant.openingHours.mon) 
+if (restaurant.openingHours && restaurant.openingHours.mon)
   console.log(restaurant.openingHours.mon.open);
 
 // WITH OPTIONAL CHAINING
@@ -62,11 +62,21 @@ console.log(restaurant.openingHours?.mon?.open);
 
 const days = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
 
-for(const day of days) {
-console.log(day);
-const open = restaurant.openingHours[day]?.open ?? 'closed';
-console.log(`Open at ${open}`);
+for (const day of days) {
+  const open = restaurant.openingHours[day]?.open ?? 'closed';
+  console.log(`Open at ${open}`);
 }
+
+// Methods
+console.log(restaurant.order?.(0, 1) ?? 'Method does not exist');
+console.log(restaurant.orderRisotto?.(0, 1) ?? 'Method does not exist');
+
+// Arrays
+const users = [{ name: 'Jonas', email: 'b5H8h@example.com' }];
+
+console.log(users[0]?.name ?? 'Users array empty'); // LOOK TO USE NULLISH EVERYTIME ??
+
+
 
 
 /*
