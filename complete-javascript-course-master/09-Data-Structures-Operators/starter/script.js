@@ -47,12 +47,18 @@ const restaurant = {
     );
   },
 
-  orderPizza: function (mainIngredient, ...otherIngredients) {
+  orderPizza(mainIngredient, ...otherIngredients) {
     console.log(mainIngredient);
     console.log(otherIngredients);
   },
 };
 
+
+
+
+
+
+/*
 // FOR OF
 const menu = [...restaurant.mainMenu, ...restaurant.starterMenu];
 
@@ -66,21 +72,8 @@ for(const [i, el] of menu.entries()) {
   console.log(`${i + 1}: ${el}`);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+console.log(...menu.entries());
+*/
 
 /*
 ///////////////////////////////////
