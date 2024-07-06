@@ -53,6 +53,42 @@ const restaurant = {
   },
 };
 
+// SETS
+
+const ordersSet = new Set([
+  'Pasta',
+  'Pizza',
+  'Pizza',
+  'Risotto',
+  'Pasta',
+  'Pizza',
+]); // SETS ARE ALSO ITERABLES
+// An iterable is an object that can be looped over.
+console.log(ordersSet);
+
+console.log(ordersSet.size); // SIZE IS THE SAME AS LENGTH IN ARRAYS
+
+console.log(ordersSet.has ('Pizza')); // ASKING DOES IT HAVE
+console.log(ordersSet.add ('Garlic Bread')); // ADDS
+ordersSet.delete('Risotto')
+console.log(ordersSet);
+
+// NO POSSIBLE WAY OF GETTING VALUES OUT OF A SET
+
+for(const order of ordersSet) console.log(order);
+
+// EXAMPLE
+const staff = ['Waiter', 'Chef', 'Waiter', 'Manager', 'Chef', 'Waiter'];
+
+const staffUnique = [...new Set(staff)]
+
+console.log(staffUnique);
+console.log(new Set(['Waiter', 'Chef', 'Waiter', 'Manager', 'Chef', 'Waiter']).size
+);
+
+//////////////////////////////////////
+// CODING CHALLENGE 2
+
 /* 
 Let's continue with our football betting app!
 
@@ -73,6 +109,7 @@ BONUS: Create an object called 'scorers' which contains the names of the players
 
 GOOD LUCK 😀
 */
+/*
 
 const game = {
   team1: 'Bayern Munich',
@@ -143,11 +180,6 @@ for(const [team, odd] of Object.entries(game.odds)) // This line starts a for...
 // console.log(`Odds of victory for ${game.team1}: ${game.odds.team1}`);
 // console.log(`Odd of draw: ${game.odds.x}`);
 // console.log(`Odds of victory for ${game.team2}: ${game.odds.team2}`);
-
-// 4 (BONUS)
-
-
-
 
 
 /*
