@@ -53,11 +53,37 @@ const restaurant = {
   },
 };
 
+// MAPS
+// Maps can be any type of key (string, number, boolean, object, etc), but an object is only a string key.
 
+const rest = new Map();
+rest.set('name', 'Classico Italiano');
+rest.set(1, 'Firenze, Italy');
+rest.set(2, 'Lisbon, Portugal');
 
+rest.set('categories', ['Italian', 'Pizzeria', 'Vegetarian', 'Organic']);
 
+console.log(rest.set('open', 11).set('close', 23));
 
+rest.set(true, 'we are open :D');
+rest.set(false, 'we are closed :D');
 
+const time = 8;
+console.log(rest.get(time > rest.get('open') && time < rest.get('close')));
+
+console.log(rest.has('categories'));
+rest.delete(2);
+console.log(rest);
+console.log(rest.size);
+// rest.clear();
+// console.log(rest);
+
+const arr = [1, 2];
+rest.set(arr, 'Test');
+rest.set(document.querySelector('h1'), 'Heading');
+// rest.set([1, 2], 'Test');
+console.log(rest);
+console.log(rest.get(arr));
 
 /*
 // SETS
