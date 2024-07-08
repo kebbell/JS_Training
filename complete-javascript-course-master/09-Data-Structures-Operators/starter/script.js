@@ -54,6 +54,11 @@ const restaurant = {
 };
 
 const airline = 'Tap Air Portugal';
+
+
+/*
+// STRINGS
+const airline = 'Tap Air Portugal';
 const plane = 'A320';
 
 console.log(plane[0]);
