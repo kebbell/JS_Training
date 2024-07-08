@@ -53,6 +53,84 @@ const restaurant = {
   },
 };
 
+const airline = 'Tap Air Portugal';
+const plane = 'A320';
+
+console.log(plane[0]);
+console.log(plane[1]);
+console.log(plane[2]);
+console.log('B737'[0]);
+
+console.log(airline.length);
+console.log('B737'.length);
+
+console.log(airline.indexOf('o'));
+console.log(airline.lastIndexOf('g'));
+
+console.log(airline.indexOf('Portugal'));
+console.log(airline.slice(4));
+console.log(airline.slice(4, 7));
+
+console.log(airline.slice(airline.indexOf(' ') + 1));
+console.log(airline.slice(airline.indexOf('g')));
+
+console.log(airline.slice(-2));
+console.log(airline.slice(6, -5));
+
+const checkMiddleSeat = function (seat) {
+  // B and E are middle seats
+  const s = seat.slice(-1);
+  if (s === 'B' || s === 'E')
+    console.log('Middle Seat');
+  else console.log('Well Done');
+}
+
+checkMiddleSeat('11B');
+checkMiddleSeat('23C');
+checkMiddleSeat('3E'); 
+checkMiddleSeat('38A');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ///////////////////////////////////////
 // Coding Challenge #3
 
@@ -68,6 +146,7 @@ Let's continue with our football betting app! This time, we have a map with a lo
 GOOD LUCK 😀
 */
 
+/*
 const gameEvents = new Map([
   [17, '⚽️ GOAL'],
   [36, '🔁 Substitution'],
@@ -90,12 +169,16 @@ gameEvents.delete(64);
 console.log(gameEvents);
 
 // 3.
-console.log('An event happened, on average, every 9 minutes');
+console.log(`An event happened, on average, every ${90 / gameEvents.size} minutes`);
+const time = [...gameEvents.keys()].pop();
+console.log(time);
+console.log(`An event happened, on average, every ${time / gameEvents.size} minutes`);
+
 
 // 4.
-for (const [key, value] of gameEvents.entries()) {
-  const half = key <= 45 ? 'FIRST' : 'SECOND';
-  console.log(`[${half} HALF] ${key}: ${value}`);
+for (const [min, event] of gameEvents.entries()) {
+  const half = min <= 45 ? 'FIRST' : 'SECOND';
+  console.log(`[${half} HALF] ${min}: ${event}`);
 }
 
 
