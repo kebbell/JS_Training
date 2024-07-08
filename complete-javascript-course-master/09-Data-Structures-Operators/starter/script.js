@@ -55,6 +55,58 @@ const restaurant = {
 
 const airline = 'Tap Air Portugal';
 
+console.log(airline.toLowerCase());
+console.log(airline.toUpperCase());
+
+// Fix capitalization in name
+// const passenger = 'sTeven';
+// const passengerLower = passenger.toLowerCase();
+// const passengerCorrect = passengerLower[0].toUpperCase() + passengerLower.slice(1);
+// console.log(passengerCorrect);
+
+// const passenger = 'MARTIN';
+// const passengerLowercase = (passenger) =>
+//   passenger.charAt(0).toUpperCase() + passenger.slice(1).toLowerCase();
+
+// console.log(passengerLowercase(passenger));
+
+// const player = 'JACKSON'
+// const playerCorrect = player[0].toUpperCase() + player.slice(1).toLowerCase();
+// console.log(playerCorrect);
+
+const runners = 'PALMER';
+const runnersCorrect =
+  runners[0].toUpperCase() + runners.slice(1).toLowerCase();
+console.log(runnersCorrect);
+
+const teamPlayersSurnames = 'ANDERSON';
+const teamPlayersSurnamesCorrect =
+  teamPlayersSurnames[0].toUpperCase() +
+  teamPlayersSurnames.slice(1).toLowerCase();
+
+console.log(teamPlayersSurnamesCorrect);
+
+const email = 'smithcrawl@example.com';
+const loginEmail = '  SMITHCrawl@example.com';
+
+const correctEmail = loginEmail.toLowerCase().trim();
+
+console.log(correctEmail);
+console.log(email === correctEmail);
+
+// replacing
+const priceGB = '8764,73£';
+console.log(priceGB);
+const priceUS = priceGB.replace('£', '$').replace(',', '.');
+console.log(priceUS);
+
+const announcement = `All passengers come to boarding door 23. Boarding door 23!`;
+console.log(announcement.replaceAll('door', 'gate').replaceAll('23', '45'));
+
+
+
+
+
 
 /*
 // STRINGS
