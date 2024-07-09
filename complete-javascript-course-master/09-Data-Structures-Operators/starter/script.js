@@ -53,36 +53,24 @@ const restaurant = {
   },
 };
 
-const airline = 'Tap Air Portugal';
-
-console.log(airline.toLowerCase());
-console.log(airline.toUpperCase());
-
-// Fix capitalization in name
-// const passenger = 'sTeven';
-// const passengerLower = passenger.toLowerCase();
-// const passengerCorrect = passengerLower[0].toUpperCase() + passengerLower.slice(1);
-// console.log(passengerCorrect);
-
-// const passenger = 'MARTIN';
-// const passengerLowercase = (passenger) =>
-//   passenger.charAt(0).toUpperCase() + passenger.slice(1).toLowerCase();
-
-// console.log(passengerLowercase(passenger));
-
-// const player = 'JACKSON'
-// const playerCorrect = player[0].toUpperCase() + player.slice(1).toLowerCase();
-// console.log(playerCorrect);
 
 
+// STRING P3
+// SPLIT AND JOIN
 
+console.log('a+very+nice+string'.split('+'));
+console.log('Jonas Schmedtmann'.split(' '));
 
+const [firstName, lastName] = 'Jonas Schmedtmann'.split(' ');
+
+const newName = ['Mr.', firstName, lastName.toUpperCase()].join(' ');
+console.log(newName);
 
 
 
 
 // STRING P2
-
+/*
 const runners = 'PALMER';
 const runnersCorrect =
   runners[0].toUpperCase() + runners.slice(1).toLowerCase();
@@ -178,7 +166,26 @@ checkMiddleSeat('3E');
 checkMiddleSeat('38A');
 
 
+const airline = 'Tap Air Portugal';
 
+console.log(airline.toLowerCase());
+console.log(airline.toUpperCase());
+
+// Fix capitalization in name
+// const passenger = 'sTeven';
+// const passengerLower = passenger.toLowerCase();
+// const passengerCorrect = passengerLower[0].toUpperCase() + passengerLower.slice(1);
+// console.log(passengerCorrect);
+
+// const passenger = 'MARTIN';
+// const passengerLowercase = (passenger) =>
+//   passenger.charAt(0).toUpperCase() + passenger.slice(1).toLowerCase();
+
+// console.log(passengerLowercase(passenger));
+
+// const player = 'JACKSON'
+// const playerCorrect = player[0].toUpperCase() + player.slice(1).toLowerCase();
+// console.log(playerCorrect);
 
 
 
