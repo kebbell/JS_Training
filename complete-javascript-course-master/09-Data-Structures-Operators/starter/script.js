@@ -103,7 +103,11 @@ console.log(priceUS);
 const announcement = `All passengers come to boarding door 23. Boarding door 23!`;
 console.log(announcement.replaceAll('door', 'gate').replaceAll('23', '45'));
 
-
+// Booleans
+const plane = 'Airbus A320neo';
+console.log(plane.includes('A320'));
+console.log(plane.includes('Boeing'));
+console.log(plane.startsWith('Airb'));
 
 
 
