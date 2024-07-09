@@ -74,6 +74,15 @@ console.log(airline.toUpperCase());
 // const playerCorrect = player[0].toUpperCase() + player.slice(1).toLowerCase();
 // console.log(playerCorrect);
 
+
+
+
+
+
+
+
+// STRING P2
+
 const runners = 'PALMER';
 const runnersCorrect =
   runners[0].toUpperCase() + runners.slice(1).toLowerCase();
@@ -109,11 +118,28 @@ console.log(plane.includes('A320'));
 console.log(plane.includes('Boeing'));
 console.log(plane.startsWith('Airb'));
 
+if (plane.startsWith('Airb') && plane.endsWith('neo')) {
+  console.log('Part of the NEW family');
+}
 
+const checkBaggage = function (item) {
+  const baggage = item.toLowerCase();
+  if (baggage.includes('knife') || baggage.includes('gun')) {
+    console.log('You are not allowed on board');
+  } else {
+    console.log('Welcome on board');
+  }
+}
+checkBaggage('Socks');
+checkBaggage('Shoes');
+checkBaggage('T-Shirt');
+checkBaggage('gun')
+checkBaggage('Knife')
+checkBaggage('shorts')
 
 
 /*
-// STRINGS
+// STRINGS P1
 const airline = 'Tap Air Portugal';
 const plane = 'A320';
 
