@@ -53,12 +53,68 @@ const restaurant = {
   },
 };
 
-
-
 // STRING P3
 // SPLIT AND JOIN
 
+console.log('a+very+nice+string'.split('+'));
+console.log('Sam Kebbell'.split(' '));
 
+const [firstName, lastName] = 'Sam Kebbell'.split(' ');
+console.log(firstName, lastName);
+
+const newName = ['Mr.', firstName, lastName.toUpperCase()].join(' ');
+console.log(newName);
+
+// SPLIT = SPLITTING INTO ARRAYS
+// JOIN = JOINING TO MAKE A STRING
+
+// Makes first letter of names, UPPERCASE
+const capitalizeName = function (name) {
+  const names = name.split(' ');
+  const nameUpper = [];
+
+  for (const n of names) {
+    //nameUpper.push(n[0].toUpperCase() + n.slice(1));
+    nameUpper.push(n.replace(n[0], n[0].toUpperCase()));
+    // BOTH DO THE SAME
+  }
+
+  console.log(nameUpper.join(' '));
+};
+
+capitalizeName('jessicca annn smith davis');
+capitalizeName('sam kebbell');
+
+// PADDING A STRING
+// ADDING TO START OR END
+
+const message = 'Go to Gate 23';
+console.log(message.padStart(25, '+').padEnd(20, '+'));
+console.log('Sam'.padStart(25, '+'));
+console.log('Sam'.padEnd(25, '+'));
+
+const maskCreditCard = function (number) {
+  const str = number + '';
+  const last = str.slice(-4);
+  return last.padStart(str.length, '*');
+};
+
+console.log(maskCreditCard(4333876261763635));
+
+// REPEAT
+
+const message2 = 'Bad Weather, All Departures Delayed. ';
+
+console.log(message2.repeat(4));
+
+const planesInLine = function(n) {
+  console.log(`There are ${n} planes in line ${'✈️'.repeat(n)}`);
+
+}
+
+planesInLine(5)
+planesInLine(3)
+planesInLine(12)
 
 
 // STRING P2
