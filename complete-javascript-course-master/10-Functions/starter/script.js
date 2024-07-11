@@ -1,6 +1,8 @@
 'use strict';
 
 /*
+// FUNCTIONS
+
 const bookings = [];
 const createBooking = function (
   flightNum,
@@ -23,6 +25,7 @@ createBooking('LH123', 9);
 createBooking('LH123', undefined ,9); // UNDEFINED WILL MAKE IT DEFAULT 
 */
 
+/*
 const flight = 'LH235'
 const sam = {
   name: 'Sam Kebbell',
@@ -50,4 +53,7 @@ const newPassport = function(person) {
 } 
 newPassport(sam)
 checkIn(flight, sam)
+
+*/
+
 
