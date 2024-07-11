@@ -56,7 +56,6 @@ checkIn(flight, sam)
 
 */
 
-
 const oneWord = function (str) {
   return str.replace(/ /g, '').toLowerCase();
 };
@@ -64,16 +63,16 @@ const oneWord = function (str) {
 const upperFirstWord = function (str) {
   const [first, ...others] = str.split(' ');
   return [first.toUpperCase(), ...others].join(' ');
-}
+};
 
 const transformer = function (str, fn) {
   console.log(`Original string: ${str} `);
   console.log(`Transformed string: ${fn(str)}`);
 
   console.log(`Transformed by: ${fn.name}`);
+};
 
-}
-
+/*
 // JS uses callbacks all the time
 transformer('Sam is working on Javascript', upperFirstWord)
 
@@ -84,8 +83,78 @@ const high5 = function () {
 }
 document.body.addEventListener('click', high5)
 
-['Jonas', 'Martha', 'Adam'].forEach(high5)
+// ['Jonas', 'Martha', 'Adam'].forEach(high5)
 
 
-//
+// Functions returning functions
+
+// const greet = function (greeting) {
+//   return function (name) {
+//     console.log(`${greeting} ${name}`);
+//   }
+// }
+
+const greet = greeting => name => console.log(`${greeting} ${name}`);
+
+const greeterHey = greet('Hey')
+greeterHey('Sam')
+greeterHey('Tom')
+
+greet('Hello')('Sam')
+
+greet('Hello')('Sam')
+
+
+*/
+/*
+const lufthansa = {
+  airline: 'Lufthansa',
+  iataCode: 'LH',
+  bookings: [],
+
+  book(flightNum, name) {
+    console.log(
+      `${name} booked a seat on ${this.airline} flight ${this.iataCode}${flightNum}`
+    );
+  },
+};
+
+lufthansa.book(239, 'Mark Schmedtmann');
+lufthansa.book(635, 'John Smith');
+
+const eurowings = {
+  airline: 'Eurowings',
+  iataCode: 'EW',
+  bookings: [],
+};
+
+const book = lufthansa.book;
+
+// Does NOT work
+// book(23, 'Sarah Williams');
+
+// Call method
+book.call(eurowings, 23, 'Sarah Williams');
+console.log(eurowings);
+
+const swiss = {
+  airline: 'Swiss Air Lines',
+  iataCode: 'LX',
+  bookings: [],
+};
+
+book.call(swiss, 583, 'Mary Cooper');
+
+// APPLY METHOD
+
+const flightData = [583, 'George Cooper'];
+
+book.apply(swiss, flightData);
+console.log(swiss);
+
+book.call(swiss, ...flightData);
+
+*/
+
+// BIND METHOD
 
