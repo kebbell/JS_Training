@@ -106,7 +106,7 @@ greet('Hello')('Sam')
 
 
 */
-/*
+
 const lufthansa = {
   airline: 'Lufthansa',
   iataCode: 'LH',
@@ -154,7 +154,40 @@ console.log(swiss);
 
 book.call(swiss, ...flightData);
 
-*/
+
 
 // BIND METHOD
+// book.call(eurowings, 23, 'Sarah Williams');
 
+const bookEW = book.bind(eurowings);
+const bookLH = book.bind(lufthansa);
+
+bookEW (23, 'Steven Williams');
+
+const bookLH23 = book.bind(lufthansa, 23);
+bookLH23('Jonas Schmedtmann');
+bookLH23('Martha Cooper');
+
+// with event listeners
+lufthansa.planes = 300;
+lufthansa.buyPlane = function() {
+  console.log(this);
+  this.planes++;
+  console.log(this.planes);
+} 
+document
+  .querySelector('.buy')
+  .addEventListener('click', lufthansa.buyPlane.bind(lufthansa));
+
+  // PARTIAL APPLICATION
+
+  const addTax = (rate, value) => value + value * rate; 
+
+  console.log( addTax(.1, 200) );
+
+  const addVAT = addTax.bind(null, .23);
+  // addVAT = value => value + value * 0.23;  
+
+
+  // CHALLENGE
+  
