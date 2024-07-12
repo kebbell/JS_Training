@@ -107,6 +107,8 @@ greet('Hello')('Sam')
 
 */
 
+/*
+
 const lufthansa = {
   airline: 'Lufthansa',
   iataCode: 'LH',
@@ -191,4 +193,19 @@ document
 
   // CHALLENGE
   
+  const addTaxRate = function(rate) {
+    return function(value) {
+      return value + value * rate;
+    }
+  }
+
+  const addVAT2 = addTaxRate(.23);
+  console.log(addVAT2(100));
+  console.log(addVAT2(23));
+
+  */
+
+  /////////////////////////////////
+  // CODING CHALLENGE
+
   
