@@ -239,6 +239,7 @@ BONUS TEST DATA 2: [1, 5, 3, 9, 6, 1]
 GOOD LUCK 😀
 */
 
+/*
 const poll = {
   question: 'What is your favourite programming language?',
   options: ['0: JavaScript', '1: Python', '2: Rust', '3: C++'],
@@ -307,5 +308,20 @@ document
   booker();
   booker();
 
-  
+*/
 
+// MORE CLOSURES
+// CLOSURES BASIC MEANING - YOU CAN USE VARIABLES THAT HAVE ALREADY BEEN DEFINED IN THE OUTER SCOPE THAT SEEM TO HAVE NO ACCESS.
+// CLOSURES ARE THE BRIDGING GAP BETWEEN THE GLOBAL SCOPE
+
+let f;
+const g = function () {
+  const a = 23;
+
+  f = function () {
+    console.log(a * 2);
+  };
+};
+
+g();
+f();
