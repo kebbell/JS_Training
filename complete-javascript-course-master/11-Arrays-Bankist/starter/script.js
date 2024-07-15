@@ -71,10 +71,11 @@ const currencies = new Map([
   ['GBP', 'Pound sterling'],
 ]);
 
-const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+// const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 /////////////////////////////////////////////////
 
+/*
 let arr = ['a', 'b', 'c', 'd', 'e', 'f'];
 
 // SLICE
@@ -110,3 +111,53 @@ console.log([...arr, ...arr2]); // SAME AS ABOVE
 // JOIN
 
 console.log(letters.join(' - '));
+
+// AT
+
+const arr = [23, 11, 64];
+
+console.log(arr[0]);
+console.log(arr.at(0)); // SAME AS ABOVE
+
+
+// GETTING THE LAST ELEMENT
+
+console.log(arr[arr.length - 1]);
+console.log(arr.slice(-1)); // SHOWS AS AN ARRAY - ADD A [0] AT THE END TO MAKE A NUMBER
+console.log(arr.slice(-1)[0]);
+
+console.log(arr.at(-1)); // NEW EASIER WAY TO GET LAST ELEMENT
+
+console.log('jonas'.at(2));
+*/
+
+/*
+// LOOPING ARRAYS WITH EACH OTHER
+
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+
+// for (const movement of movements) {
+for (const [i, movement] of movements.entries()) {
+  if (movement > 0) {
+    console.log(`Movement ${i + 1}: You deposited ${movement}`);
+  } else {
+    console.log(`Movement ${i + 1}: You withdrew ${Math.abs(movement)}`);
+  }
+ }
+
+console.log('-----forEach-----');
+
+movements.forEach(function (mov, i, arr) {
+  if (mov > 0) {
+    console.log(`Movement ${i + 1}: You deposited ${mov}`);
+  } else {
+    console.log(`Movement ${i + 1}: You withdrew ${Math.abs(mov)}`);
+  }
+});
+
+// CAN NOT BREAK OUT OF A FOR EACH LOOP
+
+*/
+
+
+
