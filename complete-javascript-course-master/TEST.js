@@ -21,3 +21,7 @@ const ncfc = function norwich(a, b) {
 console.log(norwich('pukki' + ' ' + 'is' + ' ' + 'king'));
 
 // Question: What is an Immediately Invoked Function Expression (IIFE) and provide an example?
+
+(function () {
+  console.log('hello');
+})();
