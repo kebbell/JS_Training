@@ -223,3 +223,59 @@ checkDogs([3, 5, 2, 12, 7], [4, 1, 15, 8, 3]);
 console.log('-------------------');
 checkDogs([9, 16, 6, 8, 3], [10, 5, 6, 1, 4]);
 
+// DATA TRANSFORMATION - MAPS, FILTERS, REDUCE
+
+// MAPS
+
+// MAPS RETURN A NEW ARRAY CONTAINING THE RESULTS OF APPLYING THE OPERATION ON ALL ORIGINAL ARRAY ELEMENT
+
+// FOR EXAMPLE: ARRAY HAS 5 ELEMENTS LIKE CONST ARR = [1, 2, 3, 4, 5] AND A MAP TO * 2 WOULD THEN MAKE A NEW ARRAY WITH EVERYTHING DOUBLED LIKE [2, 4, 6, 8, 10]
+
+// FILTER
+
+// FILTER RETURN A NEW ARRAY CONTAINING THE RESULTS OF APPLYING THE OPERATION ON ALL ORIGINAL ARRAY ELEMENT
+
+// EG: ARRAY HAS 5 ELEMENTS LIKE CONST ARR = [1, 2, 3, 4, 5] AND A FILTER TO  > 2 WOULD THEN MAKE A NEW ARRAY WITH ELEMENTS REMOVED LIKE [3, 4, 5]
+
+// REDUCE - SNOWBALL EFFECT
+
+// REDUCE RETURN A SINGLE VALUE
+
+// EG: ARRAY HAS 5 ELEMENTS LIKE CONST ARR = [1, 2, 3, 4, 5] AND A REDUCE TO SUM ALL ELEMENTS LIKE 15
+
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+
+const eurToUsd = 1.1;
+
+// const movementsUSD = movements.map(function (mov) {
+//   return mov * eurToUsd;
+// });
+const movementsUSD = movements.map(mov => mov * eurToUsd); // SAME AS ABOVE
+
+console.log(movements);
+console.log(movementsUSD);
+
+const movementsUSDfor = [];
+for (const mov of movements) movementsUSDfor.push(mov * eurToUsd);
+
+console.log(movementsUSDfor);
+
+const movementsDescription = movements.map(function (mov, i, arr) {
+  if (mov > 0) {
+    return `Movement ${i + 1} : You deposited ${mov}`;
+  } else {
+    return `Movement ${i + 1} : You withdrew ${Math.abs(mov)}`;
+  }
+});
+
+const movementsDescriptionfor = movements.map(
+  (mov, i) =>
+    `Movement ${i + 1} : ${
+      mov > 0 ? 'You deposited' : 'You withdrew'
+    } ${Math.abs(mov)}`
+);
+// BOTH DO THE SAME, JUST ONE USES A TURNERY OPERATOR
+
+console.log(movementsDescriptionfor);
+
+console.log(movementsDescription);
