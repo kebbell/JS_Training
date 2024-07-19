@@ -345,7 +345,7 @@ const calcAverageHumanAge = function (ages) {
 console.log(calcAverageHumanAge([5, 2, 4, 1, 15, 8, 3]));
 console.log(calcAverageHumanAge([16, 6, 10, 5, 6, 1, 4]));
 */
-
+/*
 const calcAverageHumanAge = ages =>
   ages
     .map(age => (age <= 2 ? 2 * age : 16 + age * 4))
@@ -368,5 +368,39 @@ console.log(firstWithdrawal);
 
 console.log(accounts);
 
+const account = accounts.find(acc => acc.owner === 'Jessica Davis');
+console.log(account);
+*/
+
+// Check if an element exists in an array
+console.log(movements);
+// This logs: true if the array includes -130, false otherwise
+console.log(movements.includes(-130));
+
+// Check if at least one element satisfies a condition
+// This logs: true if the array includes -130, false otherwise
+console.log(movements.some(mov => mov === -130)); 
+
+// Check if at least one element satisfies a condition
+// This logs: true if the array includes a deposit, false otherwise
+const anyDeposits = movements.some(mov => mov > 0);
+
+console.log(anyDeposits);
+
+// EVERY METHOD
+// Check if all elements satisfy a condition
+// This logs: true if the array includes only positive numbers, false otherwise
+console.log(movements.every(mov => mov > 0));
+
+// SOME METHOD
+// Check if at least one element satisfies a condition
+// This logs: true if the array includes a withdrawal, false otherwise
+console.log(movements.some(mov => mov < 0));
+
+// separate callback
+const deposit = mov => mov > 0;
+console.log(movements.some(deposit));
+
+// FINDINDEX METHOD
 const account = accounts.find(acc => acc.owner === 'Jessica Davis');
 console.log(account);
