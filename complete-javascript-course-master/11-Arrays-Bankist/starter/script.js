@@ -499,5 +499,20 @@ const y = Array.from({length: 7}, () => 1); // Length specifies the length of th
 console.log(y);
 
 
-const z = Array.from({length: 7}, (cur, i) => i + 1);
+// const z = Array.from({length: 7}, (cur, i) => i + 1);
+// console.log(z);
+
+const z = Array.from({length: 7}, (_, i) => i + 1); // _ = VALUE, i = INDEX
 console.log(z);
+
+
+// const movementsUI = Array.from(document.querySelectorAll('.movements__value'));
+// console.log(movementsUI);
+
+labelBalance.addEventListener('click', function () {
+  const movementsUI = Array.from(document.querySelectorAll('.movements__value'), el => Number(el.textContent.replace('€', '')));
+
+  console.log(movementsUI);
+});
+
+
