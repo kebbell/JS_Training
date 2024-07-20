@@ -404,3 +404,30 @@ console.log(movements.some(deposit));
 // FINDINDEX METHOD
 const account = accounts.find(acc => acc.owner === 'Jessica Davis');
 console.log(account);
+
+
+const arr = [[1, 2, 3], [4, 5], [6, 7]];
+
+console.log(arr.flat());
+// [1, 2, 3, 4, 5, 6, 7]
+// flat() flattens nested arrays to 1 array
+
+
+const arrDeep = [[[1, 2], 3], [4, [5, 6]], 7, 8];
+console.log(arrDeep.flat(2)); // GOES 2 DEEP SO 2 LEVELS DEEP
+// [1, 2, 3, 4, 5, 6, 7, 8]
+// flat() flattens nested arrays to 1 array
+
+
+// flat
+const overallBalance = accounts
+  .map(acc => acc.movements) // MAP RETURNS AN ARRAY (ALL ACCOUNTS TO 1 ARRAY)
+  .flat() // FLATTENS THE ARRAY INTO 1
+  .reduce((acc, mov) => acc + mov, 0); // 0 SPECIFIES WHERE THE ACCUMULATOR STARTS AND REDUCES ALL THE 1 TOTAL 
+
+// flatMap
+const overallBalance2 = accounts
+  .flatMap(acc => acc.movements) // flatMap can only go 1 level deep
+  .reduce((acc, mov) => acc + mov, 0);
+console.log(overallBalance2);
+
