@@ -372,6 +372,7 @@ const account = accounts.find(acc => acc.owner === 'Jessica Davis');
 console.log(account);
 */
 
+/*
 // Check if an element exists in an array
 console.log(movements);
 // This logs: true if the array includes -130, false otherwise
@@ -473,8 +474,30 @@ console.log(movements);
 // Improved
 movements.sort((a, b) => b - a);
 console.log(movements);
+*/
 
 
-console.log([1, 2, 3, 4, 5, 6]);
-console.log(new Array(1, 2, 3, 4, 5, 6));
+const arr = [1, 2, 3, 4, 5, 6, 7];
+console.log(new Array(1, 2, 3, 4, 5, 6, 7));
 
+// Empty Arrays + Fill Method
+const x = new Array(7);
+console.log(x);
+
+// x.fill(1); // FILLS THE ARRAY WITH THE VALUE SPECIFIED
+
+x.fill(1, 3, 5); // 1 = VALUE, 3 = START, 5 = END
+console.log(x); 
+
+arr.fill(23, 2, 6);
+console.log(arr);
+
+
+// Array.from
+const y = Array.from({length: 7}, () => 1); // Length specifies the length of the array
+// () => 1 specifies the value of the array
+console.log(y);
+
+
+const z = Array.from({length: 7}, (cur, i) => i + 1);
+console.log(z);
