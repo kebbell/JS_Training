@@ -476,7 +476,7 @@ movements.sort((a, b) => b - a);
 console.log(movements);
 */
 
-
+/*
 const arr = [1, 2, 3, 4, 5, 6, 7];
 console.log(new Array(1, 2, 3, 4, 5, 6, 7));
 
@@ -514,5 +514,60 @@ labelBalance.addEventListener('click', function () {
 
   console.log(movementsUI);
 });
+*/
 
+// WHICH ARRAY METHOD SHOULD YOU USE?
+
+// I WANT:
+
+// TO MUTATE ORIGINAL ARRAY
+
+// ADD TO ORIGINAL: arr.push(), arr.unshift()
+// REMOVE FROM ORIGINAL: arr.pop(), arr.shift(), arr.splice()
+// OTHERS: arr.reverse(), arr.sort(), arr.fill()
+
+// A NEW ARRAY
+
+// COMPUTE FROM ORIGINAL: arr.map()
+// FILTER FROM ORIGINAL: arr.filter()
+// PORTION FROM ORIGINAL: arr.slice()
+// ADDING ORIGINAL TO NEW: arr.concat()
+// FLATTENING THE ORIGINAL: arr.flat(), arr.flatMap()
+
+// AN ARRAY INDEX
+
+// BASED ON VALUE: arr.indexOf(), arr.lastIndexOf()
+// BASED ON TEST CONDITION: arr.findIndex()
+
+// AN ARRAY ELEMENT
+
+// BASED ON TEST CONDITION: arr.find()
+
+// KNOW IF ARRAY INCLUDES
+
+// BASED ON VALUE: arr.includes()
+// BASED ON TEST CONDITION: arr.some(), arr.every()
+
+// A NEW STRING
+
+// BASED ON SEPARATOR: arr.join()
+
+// TO TRANSFORM TO VALUE
+
+// BASED ON ACCUMULATOR: arr.reduce()
+
+// TO JUST LOOP ARRAY
+
+// BASED ON CALLBACK: arr.forEach()
+
+
+////////////////////////////////////////
+
+// ARRAY METHOD PRACTICE
+
+const bankDepositSum = accounts
+  .flatMap(acc => acc.movements)
+  .filter(mov => mov > 0)
+  .reduce((sum, cur) => sum + cur, 0);
+console.log(bankDepositSum);
 
