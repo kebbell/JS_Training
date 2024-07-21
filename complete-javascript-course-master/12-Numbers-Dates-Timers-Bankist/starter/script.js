@@ -413,6 +413,8 @@ console.log(Boolean({}));
 console.log(Boolean(''));
 */
 
+
+/*
 // MATHS AND ROUNDING
 
 console.log(Math.sqrt(25)); // SQUARE ROOT
@@ -474,3 +476,23 @@ labelBalance.addEventListener('click', function () {
     if (i % 3 === 0) row.style.backgroundColor = 'blue'
   });
 });
+*/
+
+
+// NUMERIC SEPARATOR
+
+const diameter = 287_460_000_000;
+console.log(diameter);
+
+const price = 345_99;
+console.log(price); // Underscore is a numeric separator
+
+const transferFee1 = 15_00; // Both are the same value
+const transferFee2 = 1_500; // Underscore is a numeric separator
+
+const PI = 3.1415;
+console.log(PI);
+
+console.log(Number('230_000')); // Doesn't work
+console.log(parseInt('230_000')); // Works until the underscore
+
