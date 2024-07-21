@@ -251,3 +251,163 @@ btnSort.addEventListener('click', function (e) {
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
+
+/////////////////////////////////////////////////
+/////////////////////////////////////////////////
+// LECTURES
+
+// const currencies = new Map([
+//   ['USD', 'United States dollar'],
+//   ['EUR', 'Euro'],
+//   ['GBP', 'Pound sterling'],
+// ]);
+
+// const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+
+/////////////////////////////////////////////////
+
+/*
+let arr = ['a', 'b', 'c', 'd', 'e', 'f'];
+
+// SLICE
+console.log(arr.slice(2));
+console.log(arr.slice(2, 4));
+
+console.log(arr.slice(-2));
+console.log(arr.slice(-1));
+console.log(arr.slice(1, -2));
+
+console.log(arr.slice());
+console.log([...arr]); // SPREAD OPERATOR DOES THE SAME AS ABOVE
+
+// SPLICE
+
+console.log(arr.splice(2)); // REMOVES 2 ELEMENTS FROM THE ORIGINAL ARRAY
+console.log(arr.splice(-1)); // -1 is always the last element
+console.log(arr);
+
+// REVERSE
+
+arr = ['a', 'b', 'c', 'd', 'e'];
+const arr2 = ['j', 'i', 'h', 'g', 'f'];
+console.log(arr2.reverse());
+console.log(arr2); // ORIGINAL IS MUTATED - WILL NOW BE AT REVERSED STATE
+
+// CONCAT - MERGES TWO ARRAYS
+const letters = arr.concat(arr2);
+
+console.log(letters);
+console.log([...arr, ...arr2]); // SAME AS ABOVE
+
+// JOIN
+
+console.log(letters.join(' - '));
+
+// AT
+
+const arr = [23, 11, 64];
+
+console.log(arr[0]);
+console.log(arr.at(0)); // SAME AS ABOVE
+
+
+// GETTING THE LAST ELEMENT
+
+console.log(arr[arr.length - 1]);
+console.log(arr.slice(-1)); // SHOWS AS AN ARRAY - ADD A [0] AT THE END TO MAKE A NUMBER
+console.log(arr.slice(-1)[0]);
+
+console.log(arr.at(-1)); // NEW EASIER WAY TO GET LAST ELEMENT
+
+console.log('jonas'.at(2));
+*/
+
+/*
+// LOOPING ARRAYS WITH EACH OTHER
+
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+
+// for (const movement of movements) {
+for (const [i, movement] of movements.entries()) {
+  if (movement > 0) {
+    console.log(`Movement ${i + 1}: You deposited ${movement}`);
+  } else {
+    console.log(`Movement ${i + 1}: You withdrew ${Math.abs(movement)}`);
+  }
+ }
+
+console.log('-----forEach-----');
+
+movements.forEach(function (mov, i, arr) {
+  if (mov > 0) {
+    console.log(`Movement ${i + 1}: You deposited ${mov}`);
+  } else {
+    console.log(`Movement ${i + 1}: You withdrew ${Math.abs(mov)}`);
+  }
+});
+
+// CAN NOT BREAK OUT OF A FOR EACH LOOP
+
+*/
+
+// Maps
+
+// const currencies = new Map([
+//   ['USD', 'United States dollar'],
+//   ['EUR', 'Euro'],
+//   ['GBP', 'Pound sterling'],
+// ]);
+
+// currencies.forEach(function (value, key, map) {
+//   console.log(`${key}: ${value}`);
+// });
+
+// // Set
+
+// const currenciesUnique = new Set(['USD', 'GBP', 'USD', 'EUR', 'EUR']);
+// console.log(currenciesUnique);
+// currencies.forEach(function (value, key, map) {
+//   console.log(`${key}: ${value}`); // KEY DOESN'T EXIST IN SET
+//   console.log(currenciesUnique);
+
+
+console.log(Number('23'));
+console.log(+'23'); // SAME AS ABOVE
+// + is the same as Number
+
+// PARSING
+console.log(Number.parseInt('30px', 10));
+console.log(Number.parseInt('e23', 10));
+
+console.log(Number.parseInt(' 2.5rem ')); // 2
+console.log(Number.parseFloat(' 2.5rem ')); // 2.5
+
+console.log(parseFloat('  2.5rem  ')); // 2.5
+
+
+// CHECK IF VALUE IS NaN
+console.log(Number.isNaN(20));
+console.log(Number.isNaN('20'));
+console.log(Number.isNaN(+'20X'));
+console.log(Number.isNaN(23 / 0));
+
+
+// CHECK IF VALUE IS NUMBER
+// BETTER TO CHECK IF VALUE IS NOT NaN
+console.log(Number.isFinite(20));
+console.log(Number.isFinite('20'));
+console.log(Number.isFinite(+'20X'));
+console.log(Number.isFinite(23 / 0));
+
+
+console.log(Number.isInteger('20'));
+console.log(Number.isInteger(23.0));
+
+
+// TRUTHY AND FALSY VALUES
+// 5 FALSY VALUES: 0, '', undefined, null, NaN
+console.log(Boolean(0));
+console.log(Boolean(undefined));
+console.log(Boolean('Jonas'));
+console.log(Boolean({}));
+console.log(Boolean(''));
