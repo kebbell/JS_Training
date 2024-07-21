@@ -458,3 +458,19 @@ console.log((2.7).toFixed(0)); // RETURNS A STRING
 console.log((2.7).toFixed(3)); // RETURNS A STRING
 console.log(+(2.345).toFixed(2)); // + CONVERTS TO A NUMBER
 
+// THE REMAINDER OPERATOR
+
+console.log(5 % 2); // RETURNS THE REMAINDER
+console.log(5 / 2); // RETURNS THE QUOTIENT
+
+const isEven = n => n % 2 === 0;
+console.log(isEven(8));
+console.log(isEven(23));
+console.log(isEven(514));
+
+labelBalance.addEventListener('click', function () {
+  [...document.querySelectorAll('.movements__row')].forEach(function (row, i) {
+    if (i % 2 === 0) row.style.backgroundColor = 'orangered';
+    if (i % 3 === 0) row.style.backgroundColor = 'blue'
+  });
+});
