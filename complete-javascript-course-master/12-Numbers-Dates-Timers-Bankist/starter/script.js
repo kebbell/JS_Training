@@ -496,6 +496,7 @@ console.log(Number('230_000')); // Doesn't work
 console.log(parseInt('230_000')); // Works until the underscore
 */
 
+/*
 // BIG INT - STORES NUMBERS WITH A LARGE RANGE OF VALUES
 
 console.log(2 ** 53 - 1);
@@ -532,3 +533,35 @@ console.log(huge + ' is REALLY big!!!');
 // Division
 console.log(10 / 3);
 console.log(10n / 3n);
+*/
+
+
+// DATES
+
+const now = new Date();
+console.log(now);
+
+console.log(new Date('2022-03-24'));
+console.log(new Date('March 24, 2022'));
+console.log(new Date(2022, 2, 24, 11, 23, 5));
+console.log(new Date(0));
+console.log(new Date(3 * 24 * 60 * 60 * 1000));
+
+console.log(new Date(account1.movementsDates[0]));
+
+const future = new Date(2037, 10, 19, 15, 23);
+
+console.log(future);
+console.log(future.getFullYear());
+console.log(future.getMonth());
+console.log(future.getDate());
+console.log(future.getDay());
+console.log(future.getHours());
+console.log(future.getMinutes);
+
+console.log(future.toISOString());
+
+console.log(date.now());
+
+future.setFullYear(2040); // CHANGES THE YEAR
+console.log(future);
