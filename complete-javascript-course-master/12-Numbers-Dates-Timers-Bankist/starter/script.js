@@ -413,7 +413,6 @@ console.log(Boolean({}));
 console.log(Boolean(''));
 */
 
-
 /*
 // MATHS AND ROUNDING
 
@@ -478,7 +477,7 @@ labelBalance.addEventListener('click', function () {
 });
 */
 
-
+/*
 // NUMERIC SEPARATOR
 
 const diameter = 287_460_000_000;
@@ -495,4 +494,41 @@ console.log(PI);
 
 console.log(Number('230_000')); // Doesn't work
 console.log(parseInt('230_000')); // Works until the underscore
+*/
 
+// BIG INT - STORES NUMBERS WITH A LARGE RANGE OF VALUES
+
+console.log(2 ** 53 - 1);
+console.log(Number.MAX_SAFE_INTEGER);
+console.log(2 ** 53 + 1);
+console.log(2 ** 53 + 2);
+console.log(2 ** 53 + 3);
+console.log(2 ** 53 + 4);
+
+console.log(483897656890790765n);
+console.log(BigInt(73627));
+
+// console.log(Math.sqrt(16n)); // Don't work
+
+// Operations
+console.log(10000n + 10000n);
+console.log(10000n - 10000n);
+console.log(10000n * 10000n);
+console.log(10000n / 10000n);
+console.log(10000n ** 10000n);
+
+const huge = 1987654321n;
+const num = 23;
+console.log(huge * BigInt(num));
+
+// Expressions
+console.log(20n - 13n);
+console.log(20n === 20);
+console.log(typeof 20n);
+console.log(20n == -'20');
+
+console.log(huge + ' is REALLY big!!!');
+
+// Division
+console.log(10 / 3);
+console.log(10n / 3n);
