@@ -567,6 +567,7 @@ future.setFullYear(2040); // CHANGES THE YEAR
 console.log(future);
 */
 
+/*
 const future = new Date(2037, 10, 19, 15, 23);
 console.log(+future);
 
@@ -576,6 +577,20 @@ const calcDaysPassed = (date1, date2) =>
   Math.abs(date1 - date2) / (1000 * 60 * 60 * 24); 
 
 console.log(calcDaysPassed(new Date(2037, 3, 4), new Date(2037, 3, 14)));
+
+*/
+
+const num = 3884764.23;
+
+const options = {
+  style: 'currency',
+  unit: 'mile-per-hour',
+  currency: 'EUR',
+  // useGrouping: false
+}
+console.log('US: ', new Intl.NumberFormat('en-US', options).format(num));
+console.log('Germany: ', new Intl.NumberFormat('de-DE', options).format(num));
+console.log('Browser: ', new Intl.NumberFormat(navigator.language, options).format(num));
 
 
 
