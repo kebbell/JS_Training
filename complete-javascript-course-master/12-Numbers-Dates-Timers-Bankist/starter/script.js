@@ -537,7 +537,7 @@ console.log(10n / 3n);
 
 
 // DATES
-
+/*
 const now = new Date();
 console.log(now);
 
@@ -565,3 +565,5 @@ console.log(date.now());
 
 future.setFullYear(2040); // CHANGES THE YEAR
 console.log(future);
+*/
+
