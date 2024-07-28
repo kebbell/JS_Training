@@ -1,12 +1,19 @@
 'use strict';
 
-///////////////////////////////////////
-// Modal window
-
 const modal = document.querySelector('.modal');
 const overlay = document.querySelector('.overlay');
 const btnCloseModal = document.querySelector('.btn--close-modal');
 const btnsOpenModal = document.querySelectorAll('.btn--show-modal');
+
+const btnScrollTo = document.querySelector('.btn--scroll-to');
+const section1 = document.querySelector('#section--1');
+
+const tabs = document.querySelectorAll('.operations__tab');
+const tabsContainer = document.querySelector('.operations__tab-container');
+const tabsContent = document.querySelectorAll('.operations__content');
+
+///////////////////////////////////////
+// Modal window
 
 const openModal = function (e) {
   e.preventDefault();
@@ -77,14 +84,119 @@ document
     message.remove();
   });
 
+///////////////////////////////////////
+// Scroll Effect (Smooth Scrolling)
+// Button scroll
+
+btnScrollTo.addEventListener('click', function (e) {
+  const s1coords = section1.getBoundingClientRect();
+  console.log(s1coords);
+
+  console.log(e.target.getBoundingClientRect());
+
+  console.log('Current scroll (X/Y)', window.pageXOffset, window.pageYOffset);
+
+  console.log(
+    'height/width viewport',
+    document.documentElement.clientHeight,
+    document.documentElement.clientWidth
+  );
+
+  // Scrolling
+  // OLD WAY
+  // window.scrollTo(s1coords.left + window.pageXOffset, s1coords.top + window.pageYOffset);
+  // window.scrollTo({
+  //   left: s1coords.left + window.pageXOffset,
+  //   top: s1coords.top + window.pageYOffset,
+  //   behavior: 'smooth',
+  // });
+
+  // NEW WAY (ONLY WORKS IN NEWER BROWSERS)
+  section1.scrollIntoView({ behavior: 'smooth' });
+});
+
+///////////////////////////////////////
+// PAGE NAVIGATION
+// SCROLL INTO VIEW OF ATTRIBUTION ONCE CLICKED
+// THIS WAY IS ONLY GOOD FOR SMALL AMOUNTS OF ATTRIBUTIONS
+
+// document.querySelectorAll('.nav__link').forEach(function (el) {
+//   el.addEventListener('click', function (e) {
+//     e.preventDefault();
+//     const id = this.getAttribute('href'); // GETS THE ATTRIBUTE VALUE FROM THE HTML
+//     console.log(id);
+//     document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
+//   });
+// });
+
+// EVENT DELEGATION - EVENT BUBBLING - CLEANER AND MORE EFFICIENT
+// 1. Add event listener to common parent element
+// 2. Determine what element originated the event
+
+document.querySelector('.nav__links').addEventListener('click', function (e) {
+  e.preventDefault();
+  // Matching strategy
+  // E.TARGET HELPS SEE WHAT ELEMENT WAS CLICKED ON
+  if (e.target.classList.contains('nav__link')) {
+    const id = e.target.getAttribute('href');
+    document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
+  }
+});
+
+///////////////////////////////////////
+// TAB COMPONENT
+
+tabsContainer.addEventListener('click', function (e) {
+  const clicked = e.target.closest('.operations__tab');
+
+  // Guard clause
+  if (!clicked) return;
+
+  // Remove active classes
+  tabs.forEach(t => t.classList.remove('operations__tab--active'));
+  tabsContent.forEach(c => c.classList.remove('operations__content--active'));
+
+  // Activate tab
+  clicked.classList.add('operations__tab--active');
+
+  // Activate content area
+  console.log(clicked.dataset.tab);
+  document
+    .querySelector(`.operations__content--${clicked.dataset.tab}`)
+    .classList.add('operations__content--active');
+});
+
+// ^ ADDING AND REMOVING CLASSES TO MANIPULATE THE PAGE ^
+
+///////////////////////////////////////
 // Styles
 
 message.style.backgroundColor = '#37383d';
 message.style.width = '120%';
 message.style.height =
-  Number.parseFloat(getComputedStyle(message).height, 10) + 20 + 'px'; // NEW WAY
+  Number.parseFloat(getComputedStyle(message).height, 10) + 15 + 'px'; // NEW WAY
 
 console.log(getComputedStyle(message).height);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // document.documentElement.style.setProperty('--color-primary', 'orangered');
 
@@ -119,36 +231,36 @@ logo.classList.contains('c'); // not includes!
 logo.classList.replace('c', 'k');
 */
 
-// Scroll Effect (Smooth Scrolling)
-const btnScrollTo = document.querySelector('.btn--scroll-to');
-const section1 = document.querySelector('#section--1');
+// // Scroll Effect (Smooth Scrolling)
+// const btnScrollTo = document.querySelector('.btn--scroll-to');
+// const section1 = document.querySelector('#section--1');
 
-btnScrollTo.addEventListener('click', function (e) {
-  const s1coords = section1.getBoundingClientRect();
-  console.log(s1coords);
+// btnScrollTo.addEventListener('click', function (e) {
+//   const s1coords = section1.getBoundingClientRect();
+//   console.log(s1coords);
 
-  console.log(e.target.getBoundingClientRect());
+//   console.log(e.target.getBoundingClientRect());
 
-  console.log('Current scroll (X/Y)', window.pageXOffset, window.pageYOffset);
+//   console.log('Current scroll (X/Y)', window.pageXOffset, window.pageYOffset);
 
-  console.log(
-    'height/width viewport',
-    document.documentElement.clientHeight,
-    document.documentElement.clientWidth
-  );
+//   console.log(
+//     'height/width viewport',
+//     document.documentElement.clientHeight,
+//     document.documentElement.clientWidth
+//   );
 
-  // Scrolling
-  // OLD WAY
-  // window.scrollTo(s1coords.left + window.pageXOffset, s1coords.top + window.pageYOffset);
-  // window.scrollTo({
-  //   left: s1coords.left + window.pageXOffset,
-  //   top: s1coords.top + window.pageYOffset,
-  //   behavior: 'smooth',
-  // });
+//   // Scrolling
+//   // OLD WAY
+//   // window.scrollTo(s1coords.left + window.pageXOffset, s1coords.top + window.pageYOffset);
+//   // window.scrollTo({
+//   //   left: s1coords.left + window.pageXOffset,
+//   //   top: s1coords.top + window.pageYOffset,
+//   //   behavior: 'smooth',
+//   // });
 
-  // NEW WAY (ONLY WORKS IN NEWER BROWSERS)
-  section1.scrollIntoView({ behavior: 'smooth' });
-});
+//   // NEW WAY (ONLY WORKS IN NEWER BROWSERS)
+//   section1.scrollIntoView({ behavior: 'smooth' });
+// });
 
 // Types of Events and Event Handlers
 // const h1 = document.querySelector('h1');
@@ -210,4 +322,31 @@ btnScrollTo.addEventListener('click', function (e) {
 //   // ^ Capturing ^ NOT USED MUCH TODAY AND DEFAULT IS SET TO FALSE //
 // );
 
+// EVENT DELEGATION & IMPLEMENTING PAGE NAVIGATION
+// DOM TRAVERSING
 
+// const h1 = document.querySelector('h1');
+
+// Going downwards: child
+
+// console.log(h1.querySelectorAll('.highlight'));
+// console.log(h1.childNodes); // NODES CAN BE ANYTHING
+// console.log(h1.children); // ONLY ELEMENTS (DIRECT CHILDREN)
+// h1.firstElementChild.style.color = 'white';
+// h1.lastElementChild.style.color = 'orangered';
+
+// Going upwards: parents
+
+// console.log(h1.parentNode); // PARENT NODE
+// console.log(h1.parentElement); // SAME AS ABOVE
+// h1.closest('.header').style.background = 'var(--gradient-secondary)';
+// h1.closest('h1').style.background = 'var(--gradient-secondary)';
+
+// Going sideways: siblings
+
+// console.log(h1.previousElementSibling); // PREVIOUS SIBLING
+// console.log(h1.nextElementSibling); // NEXT SIBLING
+// console.log(h1.parentElement.children);
+// [...h1.parentElement.children].forEach(function (el) {
+//   if (el !== h1) el.style.transform = 'scale(0.5)';
+// });
