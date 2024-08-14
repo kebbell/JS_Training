@@ -39,7 +39,6 @@ jack.calcAge();
 matilda.calcAge();
 jonas.calcAge();
 
-
 console.log(jack.__proto__);
 console.log(jack.__proto__ === Person.prototype);
 console.log(Person.prototype.isPrototypeOf(jack));
