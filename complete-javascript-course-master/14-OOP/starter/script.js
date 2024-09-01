@@ -51,3 +51,5 @@ console.log(jonas.species, matilda.species);
 
 console.log(jonas.hasOwnProperty.call(jonas, 'firstName'));
 console.log(jonas.hasOwnProperty.call(jack, 'firstName'));
+
+
