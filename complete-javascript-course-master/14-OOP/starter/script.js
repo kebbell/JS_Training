@@ -53,3 +53,5 @@ console.log(jonas.hasOwnProperty.call(jonas, 'firstName'));
 console.log(jonas.hasOwnProperty.call(jack, 'firstName'));
 
 
+
+
